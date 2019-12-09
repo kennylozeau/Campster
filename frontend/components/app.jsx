@@ -1,6 +1,6 @@
 import React from 'react';
 
-const App = () => {
+const App = (props) => {
   return(
     <h1>React will takeover here</h1>
   );
