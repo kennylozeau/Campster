@@ -22,39 +22,45 @@ class SignupForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     this.props.signup(this.state);
-    this.setState({
-      email: '',
-      password: '',
-      first_name: '',
-      last_name: '',
-      zip_code: ''
-    });
+    this.props.closeModal();
+    // this.setState({
+    //   email: '',
+    //   password: '',
+    //   first_name: '',
+    //   last_name: '',
+    //   zip_code: ''
+    // });
   }
 
   render() {
 
-    if (this.props.currentUser) {
+    // if (this.props.currentUser) {
+    //   return (
+    //     <>
+    //       <h1>Hello, {this.props.currentUser.email}</h1>
+    //       <button onClick={this.props.logout}>Log Out</button>
+    //     </>
+    //   )
+    // } else {
       return (
         <>
-          <h1>Hello, {this.props.currentUser.email}</h1>
-          <button onClick={this.props.logout}>Log Out</button>
-        </>
-      )
-    } else {
-      return (
-        <>
-          <h2>Join Campster</h2>
+          <header className="modal-header">
+            <h1>Join Campster</h1>
+            <h2>Discover camping in your area</h2>
+          </header>
           <form id="signup-form" onSubmit={this.handleSubmit}>
-              <input
-                type="text"
-                placeholder="First name"
-                value={this.state.first_name}
-                onChange={this.update('first_name')} />
-              <input
-                type="text"
-                placeholder="Last name"
-                value={this.state.last_name}
-                onChange={this.update('last_name')} />
+              <div>
+                <input
+                  type="text"
+                  placeholder="First name"
+                  value={this.state.first_name}
+                  onChange={this.update('first_name')} />
+                <input
+                  type="text"
+                  placeholder="Last name"
+                  value={this.state.last_name}
+                  onChange={this.update('last_name')} />
+              </div>
               <input
                 type="text"
                 placeholder="Email address"
@@ -70,11 +76,11 @@ class SignupForm extends React.Component {
                 placeholder="Zip code"
                 value={this.state.zip_code}
                 onChange={this.update('zip_code')} />
-            <button>Sign up</button>
+            <button>Join Campster</button>
           </form>
         </>
       )
-    }
+    // }
   }
 }
 

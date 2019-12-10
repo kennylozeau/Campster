@@ -1,9 +1,17 @@
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .signup {
@@ -24,13 +32,14 @@ nav {
   color: white;
 }
 
-.login {
+.login, .logout {
   color: black;
   font-size: 15px;
   padding-bottom: 5px;
+  margin-right: 10px;
 }
 
-.login:hover {
+.login:hover, .logout:hover {
   border-bottom: 2px solid #40d9ac;
 }
 

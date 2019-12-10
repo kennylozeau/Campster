@@ -10,14 +10,16 @@
 
 .modal-child {
   position: absolute;
-  top: 50%;
+  top: 30px;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 250px;
+  transform: translate(-50%, 0);
+  width: 300px;
   /* height: 400px; */
   background-color: white;
   border: 1px solid lightgray;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  animation-name: slidein;
+  animation-duration: 0.5s;
 }
 
 #login-form,
@@ -25,7 +27,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: 10px;
 }
 
@@ -56,4 +58,53 @@
   padding: 5px;
   border: 1px solid black;
   box-sizing: border-box;
+}
+
+#login-form > div,
+#signup-form > div {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+}
+
+#login-form > div > input,
+#signup-form > div > input {
+  width: 50%;
+  height: 60px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: black;
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+#login-form > div > input:first-child,
+#signup-form > div > input:first-child {
+  margin-right: 10px;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-header > h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.modal-header > h2 {
+  font-size: 14px;
+  color: #757575;
+  margin: 5px;
+}
+
+@keyframes slidein {
+  from {top: -100px; opacity: 0.5}
+  to {top: 30px; opacity: 1}
 }

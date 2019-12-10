@@ -25,16 +25,20 @@ class LoginForm extends React.Component {
 
   render() {
 
-    if (this.props.currentUser) {
+    // if (this.props.currentUser) {
+    //   return (
+    //     <>
+    //       <h1>Hello, {this.props.currentUser.email}</h1>
+    //       <button onClick={this.props.logout}>Log Out</button>
+    //     </>
+    //   )
+    // } else {
       return (
         <>
-          <h1>Hello, {this.props.currentUser.email}</h1>
-          <button onClick={this.props.logout}>Log Out</button>
-        </>
-      )
-    } else {
-      return (
-        <>
+          <header className="modal-header">
+            <h1>Welcome back!</h1>
+            <h2>Time to plan another camping trip</h2>
+          </header>
           <form id="login-form" onSubmit={this.handleSubmit}>
             <input
               type="text"
@@ -50,7 +54,7 @@ class LoginForm extends React.Component {
           </form>
         </>
       )
-    }
+    // }
   }
 }
 
