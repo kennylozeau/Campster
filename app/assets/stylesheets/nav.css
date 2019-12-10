@@ -35,7 +35,8 @@ nav {
 }
 
 #logo {
-  font-family: Optima, sans-serif;
+  /* font-family: Optima, sans-serif; */
+  font-family: 'Archivo', sans-serif;
   font-size: 25px;
   margin-left: 25px;
 }
