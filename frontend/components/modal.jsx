@@ -4,7 +4,23 @@ import { connect } from 'react-redux';
 import LoginFormContainer from './login_form_container';
 import SignupFormContainer from './signup_form_container';
 
-function Modal({ modal, closeModal }) {
+function Modal({ modal, errors, closeModal }) {
+
+  function renderErrors() {
+    let errClass = 'hidden';
+    if (errors) { errClass = '' };
+
+    return (
+      <ul className={errClass}>
+        {errors.map((error, i) => (
+          <li key={i}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  };
+
   if (!modal) {
     return null;
   }
@@ -24,13 +40,17 @@ function Modal({ modal, closeModal }) {
       <div className="modal-child" onClick={event => event.stopPropagation()}>
         {component}
       </div>
+      <div className="modal-errors">
+        {renderErrors()}
+      </div>
     </div>
   );
 }
 
 const mapStateToProps = state => {
   return {
-    modal: state.ui.modal
+    modal: state.ui.modal,
+    errors: state.errors.session
   };
 };
 

@@ -28,11 +28,12 @@ a, a:visited, a:hover, a:focus {
 	text-decoration: none;
 }
 
-button {
+button, button:hover, button:active, button:focus {
 	border: none;
 	padding: 0;
 	margin: 0;
 	text-decoration: none;
+	outline: none;
 }
 
 input, input:focus, input:active {

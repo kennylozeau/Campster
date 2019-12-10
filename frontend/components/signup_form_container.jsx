@@ -4,9 +4,9 @@ import SignupForm from './signup_form';
 import { signup } from '../actions/session_actions';
 import { closeModal } from '../actions/modal_actions';
 
-// const mapStateToProps = ({ entities, session }) => {
+// const mapStateToProps = ({ errors }) => {
 //   return {
-//     currentUser: entities.users[session.id]
+//     errors: errors.session
 //   };
 // };
 

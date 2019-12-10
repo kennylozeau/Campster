@@ -108,3 +108,14 @@
   from {top: -100px; opacity: 0.5}
   to {top: 30px; opacity: 1}
 }
+
+.modal-errors {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 11;
+  background-color: #FEF2D6;
+  color: #B38B01;
+  padding: 5px;
+  /* transition: opacity 0.5s; */
+}

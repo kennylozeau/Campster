@@ -4,9 +4,9 @@ import LoginForm from './login_form';
 import { login, logout } from '../actions/session_actions';
 import { closeModal } from '../actions/modal_actions';
 
-// const mapStateToProps = ({ entities, session }) => {
+// const mapStateToProps = ({ errors }) => {
 //   return {
-//     currentUser: entities.users[session.id]
+//     errors: errors.session
 //   };
 // };
 

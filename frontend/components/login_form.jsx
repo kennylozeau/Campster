@@ -12,15 +12,30 @@ class LoginForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  update(field) {
-    return event => this.setState({ [field]: event.currentTarget.value });
-  }
-
   handleSubmit(event) {
     event.preventDefault();
-    this.props.login(this.state);
-    this.props.closeModal();
+    this.props.login(this.state)
+    .then(() => this.props.closeModal());
     // this.setState({email: '', password: ''});
+  }
+  
+  // renderErrors() {
+  //   let errClass = 'hidden';
+  //   if (this.props.errors) { errClass = '' };
+
+  //   return (
+  //     <ul className={errClass}>
+  //       {this.props.errors.map((error, i) => (
+  //         <li key={i}>
+  //           {error}
+  //         </li>
+  //       ))}
+  //     </ul>
+  //   );
+  // }
+
+  update(field) {
+    return event => this.setState({ [field]: event.currentTarget.value });
   }
 
   render() {
@@ -52,6 +67,9 @@ class LoginForm extends React.Component {
               onChange={this.update('password')} />
             <button>Log In</button>
           </form>
+          {/* <div className="modal-errors">
+            {this.renderErrors()}
+          </div> */}
         </>
       )
     // }

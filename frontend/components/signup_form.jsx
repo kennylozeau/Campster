@@ -21,15 +21,8 @@ class SignupForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.signup(this.state);
-    this.props.closeModal();
-    // this.setState({
-    //   email: '',
-    //   password: '',
-    //   first_name: '',
-    //   last_name: '',
-    //   zip_code: ''
-    // });
+    this.props.signup(this.state)
+      .then(() => this.props.closeModal());
   }
 
   render() {
