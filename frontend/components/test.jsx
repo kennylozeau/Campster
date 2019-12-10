@@ -1,5 +1,40 @@
 import React from 'react';
+// import { login } from '../actions/session_actions';
 
-export default () => {
-  return (<h1>route test</h1>)
+class LoginForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      password: ''
+    }
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  update(field) {
+    return event => this.setState({ [field]: event.currentTarget.value });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    this.props.login(this.state);
+    this.setState({email: '', password: ''});
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>Email
+          <input type="text" value={this.state.email} onChange={this.update('email')}/>
+        </label>
+        <label>Password
+          <input type="password" value={this.state.password} onChange={this.update('password')} />
+        </label>
+        <button>Log In</button>
+      </form>
+    )
+  }
 }
+
+export default LoginForm;
