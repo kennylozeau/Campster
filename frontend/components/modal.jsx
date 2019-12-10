@@ -7,8 +7,8 @@ import SignupFormContainer from './signup_form_container';
 function Modal({ modal, errors, closeModal }) {
 
   function renderErrors() {
-    let errClass = 'hidden';
-    if (errors) { errClass = '' };
+    let errClass = 'hiddenErrors';
+    if (errors.length > 0) { errClass = '' };
 
     return (
       <ul className={errClass}>

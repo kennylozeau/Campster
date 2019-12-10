@@ -116,6 +116,13 @@
   z-index: 11;
   background-color: #FEF2D6;
   color: #B38B01;
-  padding: 5px;
   /* transition: opacity 0.5s; */
+}
+
+.modal-errors > ul {
+  padding: 5px;
+}
+
+.hiddenErrors {
+  display: none;
 }
