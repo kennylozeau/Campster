@@ -1,0 +1,41 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signup {
+  /* background-color: red; */
+  /* box-sizing: border-box; */
+  border: 3px solid #40d9ac;
+  width: 52px;
+  height: 25px;
+  padding: 7px 12px;
+  margin: 10px;
+  margin-left: 25px;
+  font-size: 15px;
+  color: #40d9ac;
+}
+
+.signup:hover {
+  background-color: #73dfb7;
+  color: white;
+}
+
+.login {
+  color: black;
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+
+.login:hover {
+  border-bottom: 2px solid #40d9ac;
+}
+
+#logo {
+  font-family: Optima, sans-serif;
+  font-size: 25px;
+  margin-left: 25px;
+}
