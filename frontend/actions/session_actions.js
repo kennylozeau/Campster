@@ -26,14 +26,15 @@ const receiveErrors = errors => {
 
 export const signup = user => dispatch => {
   return SessionApiUtils.signup(user)
-    .then(user => receiveCurrentUser(user))
-    .then(errMsg => receiveErrors(errMsg.responseJSON))
+    .then(user => dispatch(receiveCurrentUser(user)),
+    errMsg => dispatch(receiveErrors(errMsg.responseJSON)))
 }
 
 export const login = user => dispatch => {
+  debugger
   return SessionApiUtils.login(user)
-    .then(user => receiveCurrentUser(user))
-    .then(errMsg => receiveErrors(errMsg.responseJSON))
+    .then(user => dispatch(receiveCurrentUser(user)),
+    errMsg => dispatch(receiveErrors(errMsg.responseJSON)))
 }
 
 export const logout = () => dispatch => {
