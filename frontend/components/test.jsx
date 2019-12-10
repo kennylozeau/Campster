@@ -23,17 +23,29 @@ class LoginForm extends React.Component {
   }
 
   render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <label>Email
-          <input type="text" value={this.state.email} onChange={this.update('email')}/>
-        </label>
-        <label>Password
+
+    if (this.props.currentUser) {
+      return (
+        <>
+          <h1>Hello, {this.props.currentUser.email}</h1>
+          <button onClick={this.props.logout}>Log Out</button>
+        </>
+      )
+    } else {
+      return (
+        <>
+          <form onSubmit={this.handleSubmit}>
+            <label>Email
+          <input type="text" value={this.state.email} onChange={this.update('email')} />
+            </label>
+            <label>Password
           <input type="password" value={this.state.password} onChange={this.update('password')} />
-        </label>
-        <button>Log In</button>
-      </form>
-    )
+            </label>
+            <button>Log In</button>
+          </form>
+        </>
+      )
+    }
   }
 }
 

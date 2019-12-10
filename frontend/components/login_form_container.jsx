@@ -1,12 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import LoginForm from './test';
-import { login } from '../actions/session_actions';
+import { login, logout } from '../actions/session_actions';
 
-const mapDispatchToProps = dispatch => {
+const mapStateToProps = ({ entities, session }) => {
   return {
-    login: user => dispatch(login(user))
+    currentUser: entities.users[session.id]
   };
 };
 
-export default connect(null, mapDispatchToProps)(LoginForm);
+const mapDispatchToProps = dispatch => {
+  return {
+    login: user => dispatch(login(user)),
+    logout: () => dispatch(logout())
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);
