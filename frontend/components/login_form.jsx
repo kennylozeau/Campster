@@ -19,7 +19,8 @@ class LoginForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     this.props.login(this.state);
-    this.setState({email: '', password: ''});
+    this.props.closeModal();
+    // this.setState({email: '', password: ''});
   }
 
   render() {
@@ -34,13 +35,17 @@ class LoginForm extends React.Component {
     } else {
       return (
         <>
-          <form onSubmit={this.handleSubmit}>
-            <label>Email
-          <input type="text" value={this.state.email} onChange={this.update('email')} />
-            </label>
-            <label>Password
-          <input type="password" value={this.state.password} onChange={this.update('password')} />
-            </label>
+          <form id="login-form" onSubmit={this.handleSubmit}>
+            <input
+              type="text"
+              placeholder="Email address"
+              value={this.state.email}
+              onChange={this.update('email')} />
+            <input
+              type="password"
+              placeholder="Password"
+              value={this.state.password}
+              onChange={this.update('password')} />
             <button>Log In</button>
           </form>
         </>
