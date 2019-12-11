@@ -1,5 +1,4 @@
 import React from 'react';
-// import { login } from '../actions/session_actions';
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -17,36 +16,12 @@ class LoginForm extends React.Component {
     this.props.login(this.state)
       .then(() => this.props.closeModal());
   }
-  
-  // renderErrors() {
-  //   let errClass = 'hidden';
-  //   if (this.props.errors) { errClass = '' };
-
-  //   return (
-  //     <ul className={errClass}>
-  //       {this.props.errors.map((error, i) => (
-  //         <li key={i}>
-  //           {error}
-  //         </li>
-  //       ))}
-  //     </ul>
-  //   );
-  // }
 
   update(field) {
     return event => this.setState({ [field]: event.currentTarget.value });
   }
 
   render() {
-
-    // if (this.props.currentUser) {
-    //   return (
-    //     <>
-    //       <h1>Hello, {this.props.currentUser.email}</h1>
-    //       <button onClick={this.props.logout}>Log Out</button>
-    //     </>
-    //   )
-    // } else {
       return (
         <>
           <header className="modal-header">
@@ -66,12 +41,8 @@ class LoginForm extends React.Component {
               onChange={this.update('password')} />
             <button>Log In</button>
           </form>
-          {/* <div className="modal-errors">
-            {this.renderErrors()}
-          </div> */}
         </>
       )
-    // }
   }
 }
 

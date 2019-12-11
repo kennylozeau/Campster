@@ -22,6 +22,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	color: #333333;
 }
 
 a, a:visited, a:hover, a:focus {
@@ -29,9 +30,9 @@ a, a:visited, a:hover, a:focus {
 }
 
 button, button:hover, button:active, button:focus {
-	border: none;
+	/* border: none;
 	padding: 0;
-	margin: 0;
+	margin: 0; */
 	text-decoration: none;
 	outline: none;
 }

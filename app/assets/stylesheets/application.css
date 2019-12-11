@@ -13,6 +13,7 @@
  *= require reset
  *= require nav
  *= require modal
+ *= require campsite
  * require_tree .
  *= require_self
  */

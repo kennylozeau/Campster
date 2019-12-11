@@ -18,8 +18,8 @@ const NavBar = (props) => {
       <nav>
         <h2 id="logo">CAMPSTER</h2>
         <div>
-          <a href="#" className="login" onClick={() => props.openModal('login')}>Log in</a>
-          <a href="#" className="signup" onClick={() => props.openModal('signup')}>Sign up</a>
+          <button className="login" onClick={() => props.openModal('login')}>Log in</button>
+          <button className="signup" onClick={() => props.openModal('signup')}>Sign up</button>
         </div>
       </nav>
     );
@@ -29,9 +29,6 @@ const NavBar = (props) => {
 
 export default NavBar;
 
-// PREVIOUS LINKS
-  // <Link className="login" to="/login">Log in</Link>
-  // <Link className="signup" to="/signup">Sign Up</Link>
-  // <button onClick={() => dispatch(openModal('login'))}>
-  //   Log in
-  // </button>
+// PREVIOUS FUNCTIONING LINKS
+/* <a href="#" className="login" onClick={() => props.openModal('login')}>Log in</a>
+<a href="#" className="signup" onClick={() => props.openModal('signup')}>Sign up</a> */

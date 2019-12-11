@@ -3,6 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  background-color: white;
 }
 
 nav {
@@ -19,17 +20,20 @@ nav {
   /* background-color: red; */
   /* box-sizing: border-box; */
   /* SET DISPLAY TO INLINE-BLOCK WHEN YOU KNOW HOW TO CENTER IT (GET HEIGHT BACK) */
-  /* display: inline-block; */
+  display: inline-block;
   border: 3px solid #40d9ac;
-  width: 52px;
-  height: 25px;
-  padding: 7px 12px;
+  /* width: 52px; */
+  /* Peter helped me: Turn off height and add more vertical padding */
+  /* inline elements don't take vertical padding into account */
+  /* height: 25px; */
+  /* padding: 7px 12px; */
+  padding: 12px 12px;
   margin: 10px;
   margin-left: 25px;
   font-size: 15px;
   color: #40d9ac;
   transition: background-color 0.4s ease 0s, color 0.4s ease 0s;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   /* WHY DOES THIS NOT WORK? */
 }
 
@@ -39,13 +43,15 @@ nav {
 }
 
 .login, .logout {
-  color: black;
+  color: #333333;
   font-size: 15px;
+  padding: 0;
   padding-bottom: 5px;
   margin-right: 10px;
+  border: none;
   border-bottom: 2px solid white;
   transition: border-bottom 0.2s ease-in-out 0s;
-  vertical-align: middle;
+  /* vertical-align: middle; */
 }
 
 .login:hover, .logout:hover {
