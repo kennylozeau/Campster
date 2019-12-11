@@ -12,11 +12,14 @@ nav {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  height: 30px;
 }
 
 .signup {
   /* background-color: red; */
   /* box-sizing: border-box; */
+  /* SET DISPLAY TO INLINE-BLOCK WHEN YOU KNOW HOW TO CENTER IT (GET HEIGHT BACK) */
+  /* display: inline-block; */
   border: 3px solid #40d9ac;
   width: 52px;
   height: 25px;
@@ -25,6 +28,9 @@ nav {
   margin-left: 25px;
   font-size: 15px;
   color: #40d9ac;
+  transition: background-color 0.4s ease 0s, color 0.4s ease 0s;
+  vertical-align: middle;
+  /* WHY DOES THIS NOT WORK? */
 }
 
 .signup:hover {
@@ -37,6 +43,9 @@ nav {
   font-size: 15px;
   padding-bottom: 5px;
   margin-right: 10px;
+  border-bottom: 2px solid white;
+  transition: border-bottom 0.2s ease-in-out 0s;
+  vertical-align: middle;
 }
 
 .login:hover, .logout:hover {

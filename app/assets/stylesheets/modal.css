@@ -40,11 +40,38 @@
   font-size: 16px;
   margin-top: 10px;
   margin-bottom: 10px;
+  transition: background-color 0.4s ease 0s;
 }
 
 #login-form > button:hover,
 #signup-form > button:hover {
   background-color: #40d9ac;
+}
+
+.login-options {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.login-options > button {
+  width: 85%;
+  height: 60px;
+  /* background-color: #73dfb7; */
+  background-color: #40d9ac;
+  border: 3px solid #40d9ac;
+  color: white;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.4s ease 0s, color 0.4s ease 0s;
+}
+
+.login-options > button:hover {
+  background-color: white;
+  color: #40d9ac;
 }
 
 #login-form > input,

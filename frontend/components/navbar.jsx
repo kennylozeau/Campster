@@ -18,8 +18,8 @@ const NavBar = (props) => {
       <nav>
         <h2 id="logo">CAMPSTER</h2>
         <div>
-          <a href="#" className="login" onClick={() => dispatch(openModal('login'))}>Log in</a>
-          <a href="#" className="signup" onClick={() => dispatch(openModal('signup'))}>Sign up</a>
+          <a href="#" className="login" onClick={() => props.openModal('login')}>Log in</a>
+          <a href="#" className="signup" onClick={() => props.openModal('signup')}>Sign up</a>
         </div>
       </nav>
     );
