@@ -5,6 +5,7 @@ import configureStore from './store/store';
 
 // IMPORTS FOR TESTING
 // import { signup, login, logout } from './actions/session_actions';
+import { fetchCampsites, fetchCampsite } from './actions/campsite_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
@@ -26,9 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(<Root store={store} />, root);
 
   // FOR TESTING PURPOSES ONLY
-  // window.getState = store.getState;
-  // window.dispatch = store.dispatch;
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
   // window.signup = signup;
   // window.login = login;
   // window.logout = logout;
+  window.fetchCampsites = fetchCampsites;
+  window.fetchCampsite = fetchCampsite;
 });
