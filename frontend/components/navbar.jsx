@@ -9,7 +9,7 @@ const NavBar = (props) => {
       <nav>
         <h2 id="logo">CAMPSTER</h2>
         <div>
-          <a href="#" className="logout" onClick={props.logout}>Log out</a>
+          <a href="/" className="logout" onClick={props.logout}>Log out</a>
         </div>
       </nav>
     )
@@ -30,5 +30,6 @@ const NavBar = (props) => {
 export default NavBar;
 
 // PREVIOUS FUNCTIONING LINKS
-/* <a href="#" className="login" onClick={() => props.openModal('login')}>Log in</a>
+/* <a href="#" className="logout" onClick={props.logout}>Log out</a>
+<a href="#" className="login" onClick={() => props.openModal('login')}>Log in</a>
 <a href="#" className="signup" onClick={() => props.openModal('signup')}>Sign up</a> */

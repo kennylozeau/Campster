@@ -22,27 +22,31 @@ class LoginForm extends React.Component {
   }
 
   render() {
-      return (
-        <>
-          <header className="modal-header">
-            <h1>Welcome back!</h1>
-            <h2>Time to plan another camping trip</h2>
-          </header>
-          <form id="login-form" onSubmit={this.handleSubmit}>
-            <input
-              type="text"
-              placeholder="Email address"
-              value={this.state.email}
-              onChange={this.update('email')} />
-            <input
-              type="password"
-              placeholder="Password"
-              value={this.state.password}
-              onChange={this.update('password')} />
-            <button>Log In</button>
-          </form>
-        </>
-      )
+    const { openModal } = this.props;
+    return (
+      <>
+        <header className="modal-header">
+          <h1>Welcome back!</h1>
+          <h2>Time to plan another camping trip</h2>
+        </header>
+        <form id="login-form" onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            placeholder="Email address"
+            value={this.state.email}
+            onChange={this.update('email')} />
+          <input
+            type="password"
+            placeholder="Password"
+            value={this.state.password}
+            onChange={this.update('password')} />
+          <button>Log In</button>
+        </form>
+        <footer className="modal-footer">
+          <h2>Don't have a Campster account? <button onClick={() => openModal('signup')}>Sign up!</button></h2>
+        </footer>
+      </>
+    )
   }
 }
 

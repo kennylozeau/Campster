@@ -20,11 +20,21 @@ class DemoLogin extends React.Component {
   }
   
   render() {
+
+    const { openModal } = this.props;
+
     return (
       <>
         <div className="login-options">
-          <button onClick={this.handleDemoLogin}>Demo Login</button>
-          <button onClick={() => this.props.openModal('email')}>Login with email</button>
+          <header className="modal-header">
+            <h1>Welcome back!</h1>
+            <h2>Time to plan another camping trip</h2>
+          </header>
+          <button className="demo-login-btn" onClick={this.handleDemoLogin}>Demo Login</button>
+          <button className="email-login-btn" onClick={() => this.props.openModal('email')}>Login with email</button>
+          <footer className="modal-footer">
+            <h2>Don't have a Campster account? <button onClick={() => openModal('signup')}>Sign up!</button></h2>
+          </footer>
         </div>
       </>
     )

@@ -13,7 +13,8 @@ const App = (props) => {
 
 
       {/* <Route path="/login" component={LoginFormContainer} /> */}
-      <Route path="/discover" component={CampsiteIndexContainer} />
+      {/* <Route path="/discover" component={CampsiteIndexContainer} /> */}
+      <Route exact path="/" component={CampsiteIndexContainer} />
     </>
   );
 };

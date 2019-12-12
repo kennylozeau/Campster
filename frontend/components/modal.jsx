@@ -4,8 +4,9 @@ import { connect } from 'react-redux';
 import LoginFormContainer from './login_form_container';
 import SignupFormContainer from './signup_form_container';
 import DemoLoginContainer from './demo_login_container';
+import { clearErrors } from '../actions/session_actions';
 
-function Modal({ modal, errors, closeModal }) {
+function Modal({ modal, errors, closeModal, clearErrors }) {
 
   function renderErrors() {
     let errClass = 'hiddenErrors';
@@ -21,6 +22,11 @@ function Modal({ modal, errors, closeModal }) {
       </ul>
     );
   };
+
+  function handleModalClose() {
+    clearErrors();
+    closeModal();
+  }
 
   if (!modal) {
     return null;
@@ -40,7 +46,7 @@ function Modal({ modal, errors, closeModal }) {
       return null;
   }
   return (
-    <div className="modal-background" onClick={closeModal}>
+    <div className="modal-background" onClick={handleModalClose}>
       <div className="modal-child" onClick={event => event.stopPropagation()}>
         {component}
       </div>
@@ -60,7 +66,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    closeModal: () => dispatch(closeModal())
+    closeModal: () => dispatch(closeModal()),
+    clearErrors: () => dispatch(clearErrors())
   };
 };
 
