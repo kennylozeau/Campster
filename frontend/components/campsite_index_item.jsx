@@ -22,8 +22,10 @@ class CampsiteIndexItem extends React.Component {
       <article className="campsite-entry" onClick={this.handleClick}>
         <img src={window.camp1URL} height="200" />
         <summary className="campsite-details">
-          <h1>{campsite.name}</h1>
-          <h3>{campsite.description}</h3>
+          <div>
+            <h1>{campsite.name}</h1>
+            <h3>{campsite.description}</h3>
+          </div>
           <h2>${price}/night</h2>
         </summary>
       </article>

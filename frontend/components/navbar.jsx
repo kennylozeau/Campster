@@ -7,7 +7,7 @@ const NavBar = (props) => {
   if (props.currentUser) {
     return (
       <nav>
-        <h2 id="logo">CAMPSTER</h2>
+        <h2 id="logo"><a href="/" >CAMPSTER</a></h2>
         <div>
           <a href="/" className="logout" onClick={props.logout}>Log out</a>
         </div>
@@ -16,7 +16,7 @@ const NavBar = (props) => {
   } else {
     return (
       <nav>
-        <h2 id="logo">CAMPSTER</h2>
+        <h2 id="logo"><a href="/" >CAMPSTER</a></h2>
         <div>
           <button className="login" onClick={() => props.openModal('login')}>Log in</button>
           <button className="signup" onClick={() => props.openModal('signup')}>Sign up</button>

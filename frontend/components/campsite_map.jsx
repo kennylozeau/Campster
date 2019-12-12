@@ -6,8 +6,9 @@ class CampsiteMap extends React.Component {
   }
 
   componentDidMount() {
+    const { latitude, longitude } = this.props.campsite;
     const mapOptions = {
-      center: { lat: 40.702037, lng: -73.915075 },
+      center: { lat: latitude, lng: longitude },
       zoom: 13
     };
 
@@ -16,7 +17,7 @@ class CampsiteMap extends React.Component {
 
   render() {
     return (
-      <div id='map-container' ref={ map => this.mapNode = map }>
+      <div className={this.props.mapType} ref={ map => this.mapNode = map }>
 
       </div>
     )
