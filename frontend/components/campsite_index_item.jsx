@@ -16,6 +16,7 @@ class CampsiteIndexItem extends React.Component {
   render() {
     
     const { campsite } = this.props;
+    const price = campsite.price.toFixed(0);
 
     return (
       <article className="campsite-entry" onClick={this.handleClick}>
@@ -23,7 +24,7 @@ class CampsiteIndexItem extends React.Component {
         <summary className="campsite-details">
           <h1>{campsite.name}</h1>
           <h3>{campsite.description}</h3>
-          <h2>${campsite.price}/night</h2>
+          <h2>${price}/night</h2>
         </summary>
       </article>
     )

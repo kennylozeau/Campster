@@ -17,9 +17,9 @@ class CampsiteIndex extends React.Component {
     });
 
     return (
-      <ul className="campsite-list">
+      <div className="campsite-list">
         {campsiteList}
-      </ul>
+      </div>
     )
   }
 }

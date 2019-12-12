@@ -1,13 +1,17 @@
 .campsite-list {
   margin-top: 70px;
+  width: 100%;
   display: flex;
+  justify-content: space-around;
 }
 
 .campsite-entry {
   margin: 15px;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  width: 380px;
+  width: 300px;
+  min-width: 300px;
+  height: 330px;
   overflow: hidden;
 }
 
@@ -20,29 +24,36 @@
   height: auto;
 }
 
-.campsite-list h1 {
+/* WAS .campsite-list until playing around */
+.campsite-details h1 {
   font-size: 20px;
   font-weight: 600;
   margin: 5px;
   margin-top: 15px;
 }
 
-.campsite-list h2 {
+/* WAS .capmsite-list until playing around */
+.campsite-details h2 {
   font-size: 18px;
   font-weight: 500;
   margin: 5px;
   text-align: end;
+  /* justify-self: flex-end; */
 }
 
-.campsite-list h3 {
+/* WAS .capmsite-list until playing around */
+.campsite-details h3 {
   font-size: 14px;
   color: #757575;
   margin: 5px;
+  white-space: nowrap;
 }
 
 .campsite-details {
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
   padding: 0px 10px;
+  height: 130px;
 }
 
 /* .campsite-details  */

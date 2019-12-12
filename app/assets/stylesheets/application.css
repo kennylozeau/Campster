@@ -24,4 +24,10 @@ body {
 
 main {
   height: 4000px;
+  display: flex;
+}
+
+#map-container {
+  width: 500px;
+  height: 500px;
 }
