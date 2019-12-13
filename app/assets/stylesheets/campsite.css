@@ -1,7 +1,9 @@
 .campsite-list {
   /* margin-top: 70px; */
   max-width: 1060px;
-  width: 80%;
+  width: 100%;
+  /* height: calc(100vh - 70px - 51px); */
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-around;
@@ -9,12 +11,13 @@
 }
 
 .campsite-entry {
-  margin: 15px;
+  margin: 25px;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   width: 300px;
   min-width: 300px;
-  height: auto;
+  /* height: auto; */
+  height: 310px;
   overflow: hidden;
   /* background-color: white; */
 }
@@ -74,10 +77,12 @@
   display: grid;
   /* flex-direction: column; */
   grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
   justify-items: center;
   width: 90%;
   height: auto;
   padding: 15px 15px 0;
+  margin: auto;
 }
 
 .photo-comp-placeholder {
@@ -86,13 +91,15 @@
   background-color: rgb(173, 173, 173);
   grid-row: 1 / span 1;
   grid-column: 1/ span 2;
+  overflow: hidden;
 }
 
 .show-page-map {
   height: 500px;
-  width: 90%;
+  width: 100%;
   background-color: rgb(157, 233, 157);
   grid-row: 3 / span 1;
+  grid-column: 1 / span 2;
 }
 
 .res-widget {
@@ -132,12 +139,15 @@
 
 .campsite-details-container {
   grid-row: 2 / span 1;
+  background-color: lightgrey;
+  height: 400px;
+  width: 100%;
 }
 
 .content-filler {
-  width: 100px;
+  width: 100%;
   height: 2000px;
   background-color: greenyellow;
   grid-row: 4 / span 1;
-  grid-column: 1 / span 1;
+  grid-column: 1 / span 2;
 }

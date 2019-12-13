@@ -5,6 +5,7 @@ import NavBarContainer from './navbar_container';
 import Modal from './modal';
 import CampsiteIndexContainer from './campsite_index_container';
 import CampsiteShowContainer from './campsite_show_container';
+import Footer from './footer';
 import CampsiteMap from './campsite_map';
 
 const App = (props) => {
@@ -20,6 +21,7 @@ const App = (props) => {
       <Route exact path="/campsites/:campsiteId" component={CampsiteShowContainer} />
 
       {/* <CampsiteMap /> */}
+      <div className="footer-container"><Footer /></div>
     </>
   );
 };

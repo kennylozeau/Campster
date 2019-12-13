@@ -20,7 +20,9 @@ class CampsiteShow extends React.Component {
       return (
         <>
           <div className="campsite-show-container">
-            <div className="photo-comp-placeholder"></div>
+            <div className="photo-comp-placeholder">
+              <img src={window.camp1URL} width="100%"/>
+            </div>
             <div className="campsite-details-container">
               <h1>{campsite.name}</h1>
             </div>
