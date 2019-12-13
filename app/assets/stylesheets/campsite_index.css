@@ -1,0 +1,71 @@
+.campsite-list {
+  /* margin-top: 70px; */
+  max-width: 1060px;
+  width: 100%;
+  /* height: calc(100vh - 70px - 51px); */
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  justify-items: center;
+}
+
+.campsite-entry {
+  margin: 25px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 300px;
+  min-width: 300px;
+  /* height: auto; */
+  height: 310px;
+  overflow: hidden;
+  /* background-color: white; */
+}
+
+.campsite-entry:hover {
+  background-color: #f9f9f9;
+}
+
+.campsite-entry > img {
+  width: 100%;
+  height: auto;
+}
+
+/* WAS .campsite-list until playing around */
+.campsite-details h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px;
+  margin-top: 15px;
+}
+
+/* WAS .campsite-list until playing around */
+.campsite-details h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 5px;
+  /* text-align: end; */
+  align-self: flex-end;
+}
+
+/* WAS .campsite-list until playing around */
+.campsite-details h3 {
+  font-size: 14px;
+  color: #757575;
+  margin: 5px;
+  white-space: nowrap;
+}
+
+.campsite-details {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px;
+  height: auto;
+  justify-content: space-between;
+  /* height: 100%; */
+}
+
+.campsite-details > div {
+  margin-bottom: 20px;
+}
+

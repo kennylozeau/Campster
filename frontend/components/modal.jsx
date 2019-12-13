@@ -16,7 +16,7 @@ function Modal({ modal, errors, closeModal, clearErrors }) {
       <ul className={errClass}>
         {errors.map((error, i) => (
           <li key={i}>
-            {error}
+            <div className="error-icon">!</div>{error}
           </li>
         ))}
       </ul>

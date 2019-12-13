@@ -17,4 +17,6 @@ class Campsite < ApplicationRecord
 
   validates :name, :description, :location, :latitude, :longitude, :price, presence: true
 
+  has_many_attached :photos
+
 end
