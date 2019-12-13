@@ -22,7 +22,7 @@ camp2 = Campsite.create!(
   name: "Sleepy Pines",
   description: "Rural camping",
   latitude: 47.119029,
-  longitude: 114.775278,
+  longitude: -114.775278,
   location: "Lozeau, Montana",
   price: 17.50
 )

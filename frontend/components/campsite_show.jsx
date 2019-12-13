@@ -24,7 +24,14 @@ class CampsiteShow extends React.Component {
               <img src={window.camp1URL} width="100%"/>
             </div>
             <div className="campsite-details-container">
-              <h1>{campsite.name}</h1>
+              <div className="campsite-detail-header">
+                <h1>{campsite.name}</h1>
+                <h3>{campsite.location}</h3>
+              </div>
+              <div className="campsite-detail-body">
+                <div className="host-placeholder"></div>
+                <p>{campsite.description} Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quia itaque corporis animi. Voluptatem ipsum quo aperiam porro quasi sed consequuntur. Nam provident expedita aliquam eius, soluta perferendis earum sed! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quia itaque corporis animi. Voluptatem ipsum quo aperiam porro quasi sed consequuntur. Nam provident expedita aliquam eius, soluta perferendis earum sed! </p>
+              </div>
             </div>
             <div className="show-page-map"></div>
             <div className="res-widget">
