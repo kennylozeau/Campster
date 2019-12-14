@@ -5,7 +5,8 @@ import configureStore from './store/store';
 
 // IMPORTS FOR TESTING
 // import { signup, login, logout } from './actions/session_actions';
-import { fetchCampsites, fetchCampsite } from './actions/campsite_actions';
+// import { fetchCampsites, fetchCampsite } from './actions/campsite_actions';
+import { fetchReservations, createReservation, updateReservation, cancelReservation } from './actions/reservation_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
@@ -32,6 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // window.signup = signup;
   // window.login = login;
   // window.logout = logout;
-  window.fetchCampsites = fetchCampsites;
-  window.fetchCampsite = fetchCampsite;
+  // window.fetchCampsites = fetchCampsites;
+  // window.fetchCampsite = fetchCampsite;
+  window.fetchReservations = fetchReservations;
+  window.createReservation = createReservation;
+  window.updateReservation = updateReservation;
+  window.cancelReservation = cancelReservation;
 });

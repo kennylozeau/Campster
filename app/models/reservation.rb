@@ -20,4 +20,9 @@ class Reservation < ApplicationRecord
     primary_key: :id,
     foreign_key: :campsite_id
 
+  belongs_to :camper,
+    class_name: :User,
+    primary_key: :id,
+    foreign_key: :camper_id
+
 end
