@@ -1,0 +1,18 @@
+::-webkit-datetime-edit { padding: 5px; }
+
+::-webkit-datetime-edit-fields-wrapper { 
+  background: white;
+  border: 1px solid #ebebeb;
+}
+
+::-webkit-datetime-edit-text {  }
+::-webkit-datetime-edit-month-field {  }
+::-webkit-datetime-edit-day-field {  }
+::-webkit-datetime-edit-year-field {  }
+::-webkit-inner-spin-button { display: none; }
+::-webkit-calendar-picker-indicator { background: #40D9AC; }
+
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+}

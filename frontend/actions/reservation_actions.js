@@ -27,24 +27,24 @@ const removeReservation = reservationId => {
 
 export const fetchReservations = () => dispatch => {
   return ReservationApiUtils.fetchReservations()
-    .then(reservations => dispatch(receiveAllReservations(reservations)),
-      errMsg => dispatch(receiveErrors(errMsg.responseJSON)))
+    .then(reservations => dispatch(receiveAllReservations(reservations)))
+      // errMsg => dispatch(receiveErrors(errMsg.responseJSON)))
 };
 
 export const createReservation = reservation => dispatch => {
   return ReservationApiUtils.createReservation(reservation)
-    .then(reservation => dispatch(receiveReservation(reservation)),
-      errMsg => dispatch(receiveErrors(errMsg.responseJSON)))
+    .then(reservation => dispatch(receiveReservation(reservation)))
+      // errMsg => dispatch(receiveErrors(errMsg.responseJSON)))
 };
 
 export const updateReservation = reservation => dispatch => {
   return ReservationApiUtils.updateReservation(reservation)
-    .then(reservation => dispatch(receiveReservation(reservation)),
-      errMsg => dispatch(receiveErrors(errMsg.responseJSON)))
+    .then(reservation => dispatch(receiveReservation(reservation)))
+      // errMsg => dispatch(receiveErrors(errMsg.responseJSON)))
 };
 
 export const cancelReservation = reservationId => dispatch => {
   return ReservationApiUtils.cancelReservation(reservationId)
-    .then(() => dispatch(removeReservation(reservationId)),
-      errMsg => dispatch(receiveErrors(errMsg.responseJSON)))
+    .then(() => dispatch(removeReservation(reservationId)))
+      // errMsg => dispatch(receiveErrors(errMsg.responseJSON)))
 };

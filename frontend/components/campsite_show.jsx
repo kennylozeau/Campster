@@ -1,5 +1,6 @@
 import React from 'react';
 import CampsiteMap from './campsite_map';
+import ReservationFormContainer from './reservation_form_container';
 
 class CampsiteShow extends React.Component {
   constructor(props) {
@@ -37,6 +38,7 @@ class CampsiteShow extends React.Component {
             <div className="res-widget">
               <h1>${price}</h1>
               <h3>per night</h3>
+              <ReservationFormContainer />
             </div>
             <div className="content-filler"></div>
           </div>
