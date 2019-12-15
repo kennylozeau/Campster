@@ -13,7 +13,7 @@ class SearchBar extends React.Component {
   }
 
   matchingResults() {
-    const matches = [[]];
+    const matches = [];
     if (this.state.searchValue.length === 0) {
       return matches;
     }
@@ -25,9 +25,9 @@ class SearchBar extends React.Component {
       }
     });
 
-    if (matches.length === 0) {
-      matches.push(['No matches']);
-    }
+    // if (matches.length === 0) {
+    //   matches.push(['No matches']);
+    // }
 
     return matches;
   }
@@ -46,7 +46,9 @@ class SearchBar extends React.Component {
   render() {
     // debugger
     let results = [];
-    results = this.matchingResults().map((result, i) => {
+    // debugger
+    
+    let matches = this.matchingResults().map((result, i) => {
       const campsiteId = result[1];
       // debugger
       return (
@@ -54,17 +56,28 @@ class SearchBar extends React.Component {
       );
     });
 
+    if (matches.length > 0) { results = matches }
+
+    // debugger
     return (
-      <div className="search-bar-container">
-        <input type="text"
-               className="search-bar-input"
-               value={this.state.searchValue}
-               onChange={this.update}
-               placeholder="Search..."/>
-        <ul className="search-results-dropdown">
-            {results}
-        </ul>
-      </div>
+      <header>
+        <div className="main-header">
+
+        </div>
+        <div className="search-bar-container">
+          <div className="search-bar">
+            <input type="text"
+              className="search-bar-input"
+              value={this.state.searchValue}
+              onChange={this.update}
+              placeholder="Search..." />
+            <ul className="search-results-dropdown">
+              {results}
+            </ul>
+          </div>
+          <button className="search-btn">Search</button>
+        </div>
+      </header>
     )
   }
 }
