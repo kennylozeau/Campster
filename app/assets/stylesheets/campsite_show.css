@@ -29,10 +29,31 @@
 
 .show-page-map {
   height: 500px;
-  width: 110%;
+  /* width: 110%; */
   background-color: rgb(157, 233, 157);
   grid-row: 3 / span 1;
   grid-column: 1 / span 4;
+}
+
+.show-page-map-container {
+  height: 500px;
+  width: 110%;
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 4;
+  background-color: rgb(157, 233, 157);
+  position: relative;
+}
+
+.map-campsite-details {
+  position: absolute;
+  /* top: 50px;
+  left: 50px; */
+  margin-top: 50px;
+  margin-left: 150px;
+  height: 125px;
+  width: 350px;
+  background-color: white;
+  z-index: 10;
 }
 
 .res-widget {

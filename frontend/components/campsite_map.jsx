@@ -9,10 +9,27 @@ class CampsiteMap extends React.Component {
     const { latitude, longitude } = this.props.campsite;
     const mapOptions = {
       center: { lat: latitude, lng: longitude },
-      zoom: 13
+      zoom: 10,
+      streetViewControl: false,
+      fullscreenControl: false,
+      mapTypeControl: false,
+      scaleControl: true
     };
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);
+
+    const marker = new google.maps.Marker({
+      position: { lat: latitude, lng: longitude },
+      icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        scale: 75,
+        strokeColor: "#40D9AC",
+        strokeWeight: 2,
+        fillColor: "#40D9AC",
+        fillOpacity: 0.3
+      },
+      map: this.map
+    });
   }
 
   render() {
