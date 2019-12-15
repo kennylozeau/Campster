@@ -4,6 +4,7 @@
   left: 0;
   width: 100%;
   background-color: white;
+  z-index: 10;
 }
 
 .nav-header {
@@ -29,7 +30,7 @@
   /* padding: 7px 12px; */
   padding: 12px 12px;
   margin: 10px;
-  margin-left: 25px;
+  /* margin-left: 25px; */
   font-size: 15px;
   color: #40d9ac;
   transition: background-color 0.4s ease 0s, color 0.4s ease 0s;
@@ -47,7 +48,7 @@
   font-size: 15px;
   padding: 0;
   padding-bottom: 5px;
-  margin-right: 10px;
+  margin-right: 24px;
   border: none;
   border-bottom: 2px solid white;
   transition: border-bottom 0.2s ease-in-out 0s;

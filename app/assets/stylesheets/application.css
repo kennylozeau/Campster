@@ -17,6 +17,7 @@
  *= require campsite_show
  *= require footer
  *= require reservation_form
+ *= require search_bar
  * require_tree .
  *= require_self
  */

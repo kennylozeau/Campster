@@ -9,6 +9,7 @@ import CampsiteShowContainer from './campsite_show_container';
 import Footer from './footer';
 import CampsiteMap from './campsite_map';
 import UserProfileContainer from './user_profile_container';
+import SearchBarContainer from './search_bar_container';
 
 const App = (props) => {
   return(
@@ -19,6 +20,7 @@ const App = (props) => {
 
       {/* <Route path="/login" component={LoginFormContainer} /> */}
       {/* <Route path="/discover" component={CampsiteIndexContainer} /> */}
+      <Route exact path="/" component={SearchBarContainer} />
       <Route exact path="/" component={CampsiteIndexContainer} />
       <Route exact path="/campsites/:campsiteId" component={CampsiteShowContainer} />
       <ProtectedRoute path="/users/:userId" component={UserProfileContainer} />

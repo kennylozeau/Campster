@@ -20,6 +20,10 @@ const NavBar = (props) => {
       <nav className="nav-header">
         <h2 id="logo"><a href="/" >CAMPSTER</a></h2>
         <div>
+          <button className="login" >Near Me</button>
+          <button className="login" >Become a Host</button>
+          <button className="login" >About</button>
+          <button className="login" >Earn Campcash</button>
           <button className="login" onClick={() => props.openModal('login')}>Log in</button>
           <button className="signup" onClick={() => props.openModal('signup')}>Sign up</button>
         </div>

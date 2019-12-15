@@ -39,7 +39,7 @@
 .show-page-map-container {
   height: 500px;
   width: 110%;
-  grid-row: 3 / span 1;
+  grid-row: 1 / span 1;
   grid-column: 1 / span 4;
   background-color: rgb(157, 233, 157);
   position: relative;
@@ -55,6 +55,9 @@
   width: 350px;
   background-color: white;
   z-index: 10;
+  border: 1px solid lightgrey;
+  padding: 10px;
+  box-sizing: border-box;;
 }
 
 .res-widget {
@@ -63,7 +66,7 @@
   background-color: white;
   position: sticky;
   grid-column: 3 / span 1;
-  grid-row: 1 / second-line;
+  grid-row: 1 / last-line;
   top: 70px;
   z-index: 6;
   margin-top: 445px;
@@ -93,7 +96,7 @@
   width: 100%;
   height: 2000px;
   border: 1px solid lightgrey;
-  grid-row: 4 / span 1;
+  grid-row: 2 / span 1;
   grid-column: 2 / span 1;
 }
 

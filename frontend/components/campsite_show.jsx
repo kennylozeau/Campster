@@ -34,6 +34,13 @@ class CampsiteShow extends React.Component {
                 <p>{campsite.description} Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quia itaque corporis animi. Voluptatem ipsum quo aperiam porro quasi sed consequuntur. Nam provident expedita aliquam eius, soluta perferendis earum sed! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quia itaque corporis animi. Voluptatem ipsum quo aperiam porro quasi sed consequuntur. Nam provident expedita aliquam eius, soluta perferendis earum sed! </p>
               </div>
             </div>
+            <div className="res-widget">
+              <h1>${price}</h1>
+              <h3>per night</h3>
+              <ReservationFormContainer />
+            </div>
+          </div>
+          <div className="campsite-show-container">
             <div className="show-page-map-container">
               <aside className="map-campsite-details">
                 <label>Property
@@ -41,11 +48,6 @@ class CampsiteShow extends React.Component {
                 </label>
               </aside>
               <CampsiteMap mapType={"show-page-map"} campsite={this.props.campsite} />
-            </div>
-            <div className="res-widget">
-              <h1>${price}</h1>
-              <h3>per night</h3>
-              <ReservationFormContainer />
             </div>
             <div className="content-filler"></div>
           </div>
