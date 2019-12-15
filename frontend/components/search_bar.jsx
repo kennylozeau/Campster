@@ -50,17 +50,18 @@ class SearchBar extends React.Component {
       const campsiteId = result[1];
       // debugger
       return (
-        <li key={i} data-campsite-id={campsiteId} onClick={(event) => this.selectCampsite(event)}>{result[0]}</li>
+        <li key={i} data-campsite-id={campsiteId} onClick={(event) => this.selectCampsite(event)}><h2>{result[0]}</h2></li>
       );
     });
 
     return (
       <div className="search-bar-container">
         <input type="text"
+               className="search-bar-input"
                value={this.state.searchValue}
                onChange={this.update}
                placeholder="Search..."/>
-        <ul>
+        <ul className="search-results-dropdown">
             {results}
         </ul>
       </div>
