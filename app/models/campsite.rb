@@ -19,4 +19,9 @@ class Campsite < ApplicationRecord
 
   has_many_attached :photos
 
+  has_many :reservations,
+    class_name: :Reservation,
+    primary_key: :id,
+    foreign_key: :campsite_id
+
 end

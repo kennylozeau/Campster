@@ -31,7 +31,7 @@ class LoginForm extends React.Component {
         </header>
         <form id="login-form" onSubmit={this.handleSubmit}>
           <input
-            type="text"
+            type="email"
             placeholder="Email address"
             value={this.state.email}
             onChange={this.update('email')} />

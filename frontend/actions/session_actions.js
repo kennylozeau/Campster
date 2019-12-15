@@ -43,7 +43,9 @@ export const login = user => dispatch => {
       errMsg => dispatch(receiveErrors(errMsg.responseJSON)))
 }
 
+// JUST ADDED THE ERROR REJECTION 12-13 9:30pm, REMOVE IF LOSS OF FUNCTIONALITY
 export const logout = () => dispatch => {
   return SessionApiUtils.logout()
-    .then(() => dispatch(logoutCurrentUser()))
+    .then(() => dispatch(logoutCurrentUser()),
+      errMsg => dispatch(receiveErrors(errMsg.responseJSON)))
 }

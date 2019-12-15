@@ -1,0 +1,1 @@
+json.extract! reservation, :id, :campsite_id, :camper_id, :start_date, :end_date

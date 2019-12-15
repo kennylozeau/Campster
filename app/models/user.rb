@@ -23,6 +23,11 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
+  has_many :reservations,
+    class_name: :Reservation,
+    primary_key: :id,
+    foreign_key: :camper_id
+
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
     return nil if user.nil?
