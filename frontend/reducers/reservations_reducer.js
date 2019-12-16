@@ -2,7 +2,7 @@ import { RECEIVE_ALL_RESERVATIONS, RECEIVE_RESERVATION, CANCEL_RESERVATION } fro
 
 const reservationsReducer = (state = {}, action) => {
   Object.freeze(state);
-  const newState = Object.assign({}, state);
+  let newState = Object.assign({}, state);
 
   switch (action.type) {
     case RECEIVE_ALL_RESERVATIONS:

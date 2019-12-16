@@ -1,17 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import UserProfile from './user_profile';
+import { fetchReservations } from '../actions/reservation_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    currentUser: state.entities.users[state.session.id]
+    currentUser: state.entities.users[state.session.id],
+    reservations: Object.values(state.entities.reservations)
   };
 };
 
-// const mapDispatchToProps = dispatch => {
-//   return {
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchReservations: () => dispatch(fetchReservations())
+  };
+};
 
-//   };
-// };
-
-export default connect(mapStateToProps)(UserProfile);
+export default connect(mapStateToProps, mapDispatchToProps)(UserProfile);

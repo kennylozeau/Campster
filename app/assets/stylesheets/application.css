@@ -18,6 +18,7 @@
  *= require footer
  *= require reservation_form
  *= require search_bar
+ *= require profile
  * require_tree .
  *= require_self
  */

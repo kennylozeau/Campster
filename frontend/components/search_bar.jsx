@@ -16,7 +16,6 @@ class SearchBar extends React.Component {
   }
 
   handleBlur() {
-    debugger
     this.setState({showResults: "hidden"});
   }
 
