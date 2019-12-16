@@ -5,11 +5,23 @@ class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchValue: ''
+      searchValue: '',
+      showResults: 'hidden'
     };
 
     this.update = this.update.bind(this);
     this.selectCampsite = this.selectCampsite.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
+  }
+
+  handleBlur() {
+    debugger
+    this.setState({showResults: "hidden"});
+  }
+
+  handleFocus() {
+    this.setState({ showResults: "" });
   }
 
   matchingResults() {
@@ -52,7 +64,7 @@ class SearchBar extends React.Component {
       const campsiteId = result[1];
       // debugger
       return (
-        <li key={i} data-campsite-id={campsiteId} onClick={(event) => this.selectCampsite(event)}><h2>{result[0]}</h2></li>
+        <li key={i} data-campsite-id={campsiteId} onMouseDown={(event) => this.selectCampsite(event)}><h2>{result[0]}</h2></li>
       );
     });
 
@@ -70,8 +82,11 @@ class SearchBar extends React.Component {
               className="search-bar-input"
               value={this.state.searchValue}
               onChange={this.update}
-              placeholder="Search..." />
-            <ul className="search-results-dropdown">
+              onBlur={this.handleBlur}
+              placeholder="Search..."
+              
+              onFocus={this.handleFocus} />
+            <ul className={`search-results-dropdown ${this.state.showResults}`}>
               {results}
             </ul>
           </div>

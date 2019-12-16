@@ -9,7 +9,7 @@ class CampsiteMap extends React.Component {
     const { latitude, longitude } = this.props.campsite;
     const mapOptions = {
       center: { lat: latitude, lng: longitude },
-      zoom: 10,
+      zoom: 16,
       streetViewControl: false,
       fullscreenControl: false,
       mapTypeControl: false,

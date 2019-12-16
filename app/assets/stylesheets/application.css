@@ -26,6 +26,10 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 main {
   /* height: 4000px; */
   /* display: flex; */
