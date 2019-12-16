@@ -13,7 +13,9 @@ class CampsiteMap extends React.Component {
       streetViewControl: false,
       fullscreenControl: false,
       mapTypeControl: false,
-      scaleControl: true
+      scaleControl: true,
+      mapTypeId: 'terrain',
+      scrollwheel: false
     };
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);
