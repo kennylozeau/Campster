@@ -58,13 +58,6 @@
   border-bottom: none;
 }
 
-.main-header {
-  height: 178px;
-  margin-top: 114px;
-  background-color: lightgrey;
-  margin-bottom: 40px;
-}
-
 .search-btn {
   display: inline-block;
   border: 3px solid #40d9ac;
@@ -82,4 +75,26 @@
 .search-btn:hover {
   background-color: white;
   color: #40d9ac;
+}
+
+.main-header {
+  height: 150px;
+  margin: auto;
+  margin-top: 150px;
+  /* background-color: lightgrey; */
+  /* margin-bottom: 40px; */
+  max-width: 1000px;
+  width: 100%;
+}
+
+.main-header > h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.main-header > h2 {
+  font-size: 18px;
+  font-weight: 400;
+  width: 500px;
 }

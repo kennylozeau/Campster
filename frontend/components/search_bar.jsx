@@ -73,7 +73,12 @@ class SearchBar extends React.Component {
     return (
       <header>
         <div className="main-header">
-
+          <h1>
+            Find yourself outdoors.
+          </h1>
+          <h2>
+            Book private camping experiences at thousands of locations, anywhere you can imagine.
+          </h2>
         </div>
         <div className="search-bar-container">
           <div className="search-bar">
