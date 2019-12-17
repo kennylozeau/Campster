@@ -1,7 +1,8 @@
 class Api::CampsitesController < ApplicationController
 
   def index
-    @campsites = Campsite.all
+    # debugger
+    @campsites = bounds ? Campsite.in_bounds(bounds[:bounds]) : Campsite.all
     render :index
   end
 
@@ -21,4 +22,9 @@ class Api::CampsitesController < ApplicationController
       :price
     )
   end
+
+  def bounds
+    params[:bounds]
+  end
+
 end

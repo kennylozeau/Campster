@@ -1,7 +1,8 @@
-export const fetchCampsites = () => {
+export const fetchCampsites = data => {
   return $.ajax({
     method: 'GET',
     url: '/api/campsites',
+    data: { bounds: data },
     error: (err) => console.log(err)
   });
 };

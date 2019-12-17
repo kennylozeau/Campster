@@ -1,5 +1,6 @@
 import React from 'react'
 import queryString from 'query-string';
+import MarkerManager from '../util/marker_manager';
 
 class DiscoverMap extends React.Component {
   constructor(props) {
@@ -7,6 +8,7 @@ class DiscoverMap extends React.Component {
   }
 
   componentDidMount() {
+    debugger
     const { lat, lng } = queryString.parse(this.props.location.search);
     const latitude = parseFloat(lat);
     const longitude = parseFloat(lng);
@@ -23,17 +25,30 @@ class DiscoverMap extends React.Component {
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);
 
-    // const marker = new google.maps.Marker({
-    //   position: { lat: latitude, lng: longitude },
-    //   icon: {
-    //     path: google.maps.SymbolPath.CIRCLE,
-    //     scale: 75,
-    //     strokeColor: "#40D9AC",
-    //     strokeWeight: 2,
-    //     fillColor: "#40D9AC",
-    //     fillOpacity: 0.3
-    //   },
-    //   map: this.map
+    this.MarkerManager = new MarkerManager(this.map);
+
+    this.registerListeners();
+    this.MarkerManager.updateMarkers(this.props.campsites)
+
+  }
+
+  componentDidUpdate() {
+    debugger
+    this.MarkerManager.updateMarkers(this.props.campsites);
+  }
+
+  registerListeners() {
+    google.maps.event.addListener(this.map, 'idle', () => {
+      const { north, south, east, west } = this.map.getBounds().toJSON();
+      const bounds = {
+        northEast: { lat: north, lng: east },
+        southWest: { lat: south, lng: west }
+      };
+      this.props.updateBounds(bounds);
+    });
+    // google.maps.event.addListener(this.map, 'click', (event) => {
+    //   const coords = getCoordsObj(event.latLng);
+    //   this.handleClick(coords);
     // });
   }
 

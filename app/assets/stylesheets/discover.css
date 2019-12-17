@@ -3,4 +3,31 @@
 .discover-map {
   height: 650px;
   width: 500px;
+  grid-column: 3 / span 1;
+}
+
+.discover-list {
+  /* margin-top: 70px; */
+  /* max-width: 1060px; */
+  width: 100%;
+  /* height: calc(100vh - 70px - 51px); */
+  margin: auto;
+  display: grid;
+  height: auto;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-around;
+  justify-items: center;
+  grid-column: 2 / span 1;
+}
+
+.discover-container {
+  display: grid;
+  /* flex-direction: column; */
+  grid-template-columns: 1fr 4fr 600px 1fr;
+  grid-template-rows: 480px auto;
+  justify-items: center;
+  width: 90%;
+  height: 1500px;
+  padding: 15px 15px 0;
+  margin: auto;
 }

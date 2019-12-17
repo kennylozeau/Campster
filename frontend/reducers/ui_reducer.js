@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import modalReducer from './modal_reducer';
+import filterReducer from './filter_reducer';
 
-const rootReducer = combineReducers({
-  modal: modalReducer
+const uiReducer = combineReducers({
+  modal: modalReducer,
+  filter: filterReducer
 });
 
-export default rootReducer;
+export default uiReducer;

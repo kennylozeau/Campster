@@ -28,6 +28,7 @@
   margin-top: 25px;
   width: 265px;
   font-size: 18px;
+  transition: background-color 0.4s ease 0s, color 0.4s ease 0s;
 }
 
 .reservation-button:hover {
