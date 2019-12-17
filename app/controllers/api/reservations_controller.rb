@@ -1,7 +1,7 @@
 class Api::ReservationsController < ApplicationController
 
   def index
-    @reservations = Reservation.all
+    @reservations = Reservation.includes(:camper, :campsite).all
     render :index
   end
 

@@ -1,0 +1,101 @@
+.CalendarMonth_caption {
+  color: #333333;
+  background-color: rgb(243, 243, 243);
+  font-size: 18px;
+  text-align: center;
+  padding-top: 22px;
+  padding-bottom: 37px;
+  caption-side: initial
+}
+
+.DayPicker_weekHeader {
+  background-color: white;
+  color: #757575;
+  position: absolute;
+  top: 62px;
+  z-index: 2;
+  text-align: left
+}
+
+.CalendarDay {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+}
+
+.CalendarDay__default {
+  border: 1px solid #e4e7e7;
+  color: #484848;
+  background: #fff;
+  vertical-align: middle;
+}
+.CalendarDay__default:hover {
+  background: #40D9AC;
+  border: 1px solid #e4e7e7;
+  color: white;
+}
+
+.CalendarDay__blocked_out_of_range,
+.CalendarDay__blocked_out_of_range:active,
+.CalendarDay__blocked_out_of_range:hover {
+  background: #ebebeb;
+  border: 1px solid #ebebeb;
+  color: #757575;
+}
+
+.CalendarDay__selected,
+.CalendarDay__selected:active,
+.CalendarDay__selected:hover {
+  background: #40D9AC;
+  /* border: 1px double #00a699; */
+  color: #fff;
+}
+
+.DayPicker {
+  width: 310px;
+}
+
+/* .DayPicker_transitionContainer {
+  width: 200px !important;
+} */
+
+.DateInput_input {
+  font-weight: 200;
+  font-size: 19px;
+  line-height: 24px;
+  color: #484848;
+  background-color: #fff;
+  width: 100px;
+  padding: 11px 11px 9px;
+  border: 1px solid #ebebeb;
+  /* border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0; */
+  border-radius: 0;
+}
+
+.DateInput_input__focused {
+  background-color: rgb(243, 243, 243);
+  outline: 0;
+  background: #f3f3f3;
+  border: 1px solid #ebebeb;
+  /* border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0; */
+}
+
+.CalendarDay__highlighted_calendar {
+  background: #40D9AC;
+  /* border: 1px double #00a699; */
+  color: #fff;
+}
+.CalendarDay__highlighted_calendar:active,
+.CalendarDay__highlighted_calendar:hover {
+  background: #40D9AC;
+  /* border: 1px double #00a699; */
+  color: #fff;
+}

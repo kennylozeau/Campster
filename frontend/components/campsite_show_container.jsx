@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import CampsiteShow from './campsite_show';
 import { fetchCampsite } from '../actions/campsite_actions';
+import { fetchReservations } from '../actions/reservation_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -11,7 +12,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchCampsite: campsiteId => dispatch(fetchCampsite(campsiteId))
+    fetchCampsite: campsiteId => dispatch(fetchCampsite(campsiteId)),
+    fetchReservations: () => dispatch(fetchReservations())
   };
 };
 

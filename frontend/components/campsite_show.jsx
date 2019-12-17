@@ -8,7 +8,8 @@ class CampsiteShow extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchCampsite(this.props.match.params.campsiteId);
+    this.props.fetchCampsite(this.props.match.params.campsiteId)
+      .then(this.props.fetchReservations());
   }
 
   render() {

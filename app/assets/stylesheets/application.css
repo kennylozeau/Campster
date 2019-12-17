@@ -19,6 +19,7 @@
  *= require reservation_form
  *= require search_bar
  *= require profile
+ *= require discover
  * require_tree .
  *= require_self
  */
@@ -38,7 +39,7 @@ main {
   margin-top: 70px;
 }
 
-#map-container {
+/* #map-container {
   width: 500px;
   height: 500px;
-}
+} */

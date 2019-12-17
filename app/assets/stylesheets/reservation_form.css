@@ -1,4 +1,4 @@
-::-webkit-datetime-edit { padding: 5px; }
+/* ::-webkit-datetime-edit { padding: 5px; }
 
 ::-webkit-datetime-edit-fields-wrapper { 
   background: white;
@@ -10,9 +10,31 @@
 ::-webkit-datetime-edit-day-field {  }
 ::-webkit-datetime-edit-year-field {  }
 ::-webkit-inner-spin-button { display: none; }
-::-webkit-calendar-picker-indicator { background: #40D9AC; }
+::-webkit-calendar-picker-indicator { background: #40D9AC; } */
 
 .reservation-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.reservation-button {
+  background-color: #40d9ac;
+  color: white;
+  border: 3px solid #40d9ac;
+  padding: 12px;
+  margin: 10px;
+  margin-top: 25px;
+  width: 265px;
+  font-size: 18px;
+}
+
+.reservation-button:hover {
+  background-color: white;
+  color: #40d9ac;
+}
+
+.date-picker-input-container {
+  margin-top: 10px;
 }
