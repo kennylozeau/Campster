@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom'
+import { withRouter, Redirect } from 'react-router-dom'
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -13,6 +13,41 @@ class SearchBar extends React.Component {
     this.selectCampsite = this.selectCampsite.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
     this.handleFocus = this.handleFocus.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.submitSearch = this.submitSearch.bind(this);
+  }
+
+  submitSearch(result) {
+    const lat = result.geometry.location.lat();
+    const lng = result.geometry.location.lng();
+    this.props.history.push({
+      pathname: '/discover',
+      search: `?lat=${lat}&lng=${lng}`
+    });
+  }
+
+  processSearch(location, callback) {
+    const geocoder = new google.maps.Geocoder();
+    // geocoder.geocode(location, function (data) {
+    //   debugger
+    //   var lat = data[0].geometry.location.lat();
+    //   var lng = data[0].geometry.location.lng();
+    //   var origin = new google.maps.LatLng(lat, lng);
+    //   <Redirect to="/discover" />
+    // });
+
+    geocoder.geocode({ 'address': location }, function (results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        callback(results[0]);
+      }
+    });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    const location = this.state.searchValue;
+    // debugger
+    this.processSearch(location, this.submitSearch);
   }
 
   handleBlur() {
@@ -80,22 +115,24 @@ class SearchBar extends React.Component {
             Book private camping experiences at thousands of locations, anywhere you can imagine.
           </h2>
         </div>
-        <div className="search-bar-container">
-          <div className="search-bar">
-            <input type="text"
-              className="search-bar-input"
-              value={this.state.searchValue}
-              onChange={this.update}
-              onBlur={this.handleBlur}
-              placeholder="Search..."
-              
-              onFocus={this.handleFocus} />
-            <ul className={`search-results-dropdown ${this.state.showResults}`}>
-              {results}
-            </ul>
+        <form onSubmit={this.handleSubmit}>
+          <div className="search-bar-container">
+            <div className="search-bar">
+              <input type="text"
+                className="search-bar-input"
+                value={this.state.searchValue}
+                onChange={this.update}
+                onBlur={this.handleBlur}
+                placeholder="Search..."
+
+                onFocus={this.handleFocus} />
+              <ul className={`search-results-dropdown ${this.state.showResults}`}>
+                {results}
+              </ul>
+            </div>
+            <button className="search-btn">Search</button>
           </div>
-          <button className="search-btn">Search</button>
-        </div>
+        </form>
       </header>
     )
   }

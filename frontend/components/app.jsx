@@ -10,6 +10,7 @@ import Footer from './footer';
 import CampsiteMap from './campsite_map';
 import UserProfileContainer from './user_profile_container';
 import SearchBarContainer from './search_bar_container';
+import DiscoverMap from './discover_map';
 
 const App = (props) => {
   return(
@@ -24,7 +25,7 @@ const App = (props) => {
       <Route exact path="/" component={CampsiteIndexContainer} />
       <Route exact path="/campsites/:campsiteId" component={CampsiteShowContainer} />
       <ProtectedRoute path="/users/:userId" component={UserProfileContainer} />
-
+      <Route path="/discover/" component={DiscoverMap} />
       {/* <CampsiteMap /> */}
       <div className="footer-container"><Footer /></div>
     </>

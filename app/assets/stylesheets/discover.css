@@ -1,5 +1,6 @@
 
 /* PASS IN AS PROP WHEN RENDERING NEW MAP, SET SIZE */
 .discover-map {
-
+  height: 650px;
+  width: 500px;
 }
