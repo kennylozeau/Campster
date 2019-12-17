@@ -8,13 +8,13 @@ class DiscoverMap extends React.Component {
   }
 
   componentDidMount() {
-    debugger
+    // debugger
     const { lat, lng } = queryString.parse(this.props.location.search);
     const latitude = parseFloat(lat);
     const longitude = parseFloat(lng);
     const mapOptions = {
       center: { lat: latitude, lng: longitude },
-      zoom: 10,
+      zoom: 12,
       streetViewControl: false,
       fullscreenControl: false,
       mapTypeControl: false,
@@ -33,7 +33,7 @@ class DiscoverMap extends React.Component {
   }
 
   componentDidUpdate() {
-    debugger
+    // debugger
     this.MarkerManager.updateMarkers(this.props.campsites);
   }
 

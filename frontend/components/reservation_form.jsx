@@ -31,7 +31,7 @@ class ReservationForm extends React.Component {
       start_date: this.state.startDate.format('YYYY/MM/DD'),
       end_date: this.state.endDate.format('YYYY/MM/DD')
     }
-    debugger
+    // debugger
     if (this.props.currentUserId) {
       this.props.createReservation(reservation);
     } else {
