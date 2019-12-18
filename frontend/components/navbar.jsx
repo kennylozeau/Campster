@@ -35,15 +35,16 @@ class NavBar extends React.Component {
           <div className={`${this.state.dropDown} dropdown-screen`}></div>
           <h2 id="logo"><a href="/" >CAMPSTER</a></h2>
           <div className="user-nav-dropdown-wrapper" onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}>
-            <div className="user-nav-dropdown-btn">
-              <ul className={`${this.state.dropDown} dropdown-menu`}>
-                <li className="dropdown-btn" ><Link to={`/users/${currentUser.id}`}>Manage account</Link></li>
-                <li className="dropdown-btn" >Become a Host</li>
-                <li className="dropdown-btn" >Refer Hosts</li>
-                <li className="dropdown-btn" >About Campster</li>
-                <li className="dropdown-btn" onClick={() => this.handleLogout()}>Log out</li>
-              </ul>
-            </div>
+            <img src={window.iconURL} className="user-nav-dropdown-icon" />
+            <ul className={`${this.state.dropDown} dropdown-menu`}>
+              <li className="dropdown-btn" onClick={this.mouseLeave} >
+                <Link to={`/users/${currentUser.id}`}>Manage account</Link>
+              </li>
+              <li className="dropdown-btn" >Become a Host</li>
+              <li className="dropdown-btn" >Refer Hosts</li>
+              <li className="dropdown-btn" >About Campster</li>
+              <li className="dropdown-btn" onClick={() => this.handleLogout()}>Log out</li>
+            </ul>
           </div>
         </nav>
       )
