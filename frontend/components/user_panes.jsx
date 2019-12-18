@@ -20,13 +20,17 @@ class UserPanes extends React.Component {
   render() {
 
     return (
-      <section className="main-panel">
-        <div className="pane-tabs-btns">
+      <>
+        <div className="main-pane-tabs-btns">
           <button onClick={() => this.selectPane('trips')}>Trips</button>
           <button onClick={() => this.selectPane('reviews')}>Reviews</button>
         </div>
-        {this.state.selectedPane === 'trips' ? <TripsPane props={this.props}/> : <h1>Test</h1>}
-      </section>
+        <section className="main-pane">
+          <div className="main-pane-content">
+            {this.state.selectedPane === 'trips' ? <TripsPane props={this.props} /> : <h1>Test</h1>}
+          </div>
+        </section>
+      </>
     )
   }
 }

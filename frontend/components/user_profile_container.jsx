@@ -6,7 +6,8 @@ import { fetchReservations } from '../actions/reservation_actions';
 const mapStateToProps = (state, ownProps) => {
   return {
     currentUser: state.entities.users[state.session.id],
-    reservations: Object.values(state.entities.reservations)
+    reservations: Object.values(state.entities.reservations),
+    campsites: state.entities.campsites
   };
 };
 

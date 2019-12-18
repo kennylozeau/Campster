@@ -40,10 +40,18 @@ class NavBar extends React.Component {
               <li className="dropdown-btn" onClick={this.mouseLeave} >
                 <Link to={`/users/${currentUser.id}`}>Manage account</Link>
               </li>
-              <li className="dropdown-btn" >Become a Host</li>
-              <li className="dropdown-btn" >Refer Hosts</li>
-              <li className="dropdown-btn" >About Campster</li>
-              <li className="dropdown-btn" onClick={() => this.handleLogout()}>Log out</li>
+              <li className="dropdown-btn" >
+                <Link to="#" disabled>Become a Host</Link>
+              </li>
+              <li className="dropdown-btn" >
+                <Link to="#" disabled>Refer Hosts</Link>
+              </li>
+              <li className="dropdown-btn" >
+                <Link to="#" disabled>About Campster</Link>
+              </li>
+              <li className="dropdown-btn" onClick={() => this.handleLogout()}>
+                <Link to="#" disabled>Log out</Link>
+              </li>
             </ul>
           </div>
         </nav>

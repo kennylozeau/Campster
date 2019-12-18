@@ -13,7 +13,7 @@ class UserProfile extends React.Component {
 
   render() {
     if (this.props.currentUser) {
-      const { currentUser, reservations } = this.props;
+      const { currentUser, reservations, campsites } = this.props;
       
       return (
         <div className="profile-container">
@@ -27,7 +27,7 @@ class UserProfile extends React.Component {
 
               </div>
             </section>
-            <UserPanes currentUser={currentUser} reservations={reservations}/>
+            <UserPanes currentUser={currentUser} reservations={reservations} campsites={campsites}/>
           </div>
         </div>
       )

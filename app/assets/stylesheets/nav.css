@@ -76,6 +76,11 @@
   right: 0px;
 }
 
+.dropdown-menu a {
+  display: block;
+  padding: 20px;
+}
+
 .user-nav-dropdown-wrapper {
   height: 50px;
   width: 50px;
@@ -87,7 +92,7 @@
 }
 
 .dropdown-btn {
-  padding: 20px;
+  /* padding: 20px; */
   border-bottom: 1px solid lightgrey;
   text-align: start;
   padding-left: 30px;
@@ -96,7 +101,7 @@
 }
 
 .dropdown-btn:hover {
-  padding: 20px;
+  /* padding: 20px; */
   border-bottom: 1px solid lightgrey;
   text-align: start;
   padding-left: 50px;
