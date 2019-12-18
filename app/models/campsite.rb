@@ -24,6 +24,11 @@ class Campsite < ApplicationRecord
     primary_key: :id,
     foreign_key: :campsite_id
 
+  has_many :reviews,
+    class_name: :Review,
+    primary_key: :id,
+    foreign_key: :campsite_id
+
   def self.in_bounds(bounds)
     # debugger
     self.where("latitude < ?", bounds[:northEast][:lat])

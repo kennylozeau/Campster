@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: reviews
+#
+#  id             :bigint           not null, primary key
+#  campsite_id    :integer          not null
+#  reservation_id :integer          not null
+#  title          :string           not null
+#  body           :string
+#  rating         :integer          not null
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  campsite_id: 1
+  reservation_id: 1
+  title: MyString
+  body: MyString
+  rating: 1
+
+two:
+  campsite_id: 1
+  reservation_id: 1
+  title: MyString
+  body: MyString
+  rating: 1
