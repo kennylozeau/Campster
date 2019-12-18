@@ -10,10 +10,10 @@ const receiveCampsites = campsites => {
   };
 };
 
-const receiveCampsite = campsite => {
+const receiveCampsite = payload => {
   return {
     type: RECEIVE_CAMPSITE,
-    campsite
+    payload
   };
 };
 

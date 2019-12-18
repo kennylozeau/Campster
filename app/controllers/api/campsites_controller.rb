@@ -7,7 +7,7 @@ class Api::CampsitesController < ApplicationController
   end
 
   def show
-    @campsite = Campsite.find(params[:id])
+    @campsite = Campsite.includes(:reviews).find(params[:id])
     render :show
   end
 

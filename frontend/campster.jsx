@@ -7,6 +7,7 @@ import configureStore from './store/store';
 // import { signup, login, logout } from './actions/session_actions';
 import { fetchCampsites, fetchCampsite } from './actions/campsite_actions';
 import { fetchReservations, createReservation, updateReservation, cancelReservation } from './actions/reservation_actions';
+import { createReview } from './actions/review_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
@@ -39,4 +40,5 @@ document.addEventListener("DOMContentLoaded", () => {
   window.createReservation = createReservation;
   window.updateReservation = updateReservation;
   window.cancelReservation = cancelReservation;
+  window.createReview = createReview;
 });

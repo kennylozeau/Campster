@@ -8,12 +8,13 @@ class UserProfile extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchReservations();
+    this.props.fetchCampsites()
+      .then(this.props.fetchReservations());
   }
 
   render() {
-    if (this.props.currentUser) {
-      const { currentUser, reservations, campsites } = this.props;
+    if (this.props.currentUser && this.props.reservations && this.props.campsites) {
+      const { currentUser, reservations, campsites, openModal } = this.props;
       
       return (
         <div className="profile-container">
@@ -27,7 +28,11 @@ class UserProfile extends React.Component {
 
               </div>
             </section>
-            <UserPanes currentUser={currentUser} reservations={reservations} campsites={campsites}/>
+            <UserPanes
+              currentUser={currentUser}
+              reservations={reservations}
+              campsites={campsites}
+              openModal={openModal} />
           </div>
         </div>
       )

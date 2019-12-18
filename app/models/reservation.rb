@@ -25,7 +25,7 @@ class Reservation < ApplicationRecord
     primary_key: :id,
     foreign_key: :camper_id
 
-  has_one :review,
+  has_many :reviews,
     class_name: :Review,
     primary_key: :id,
     foreign_key: :reservation_id

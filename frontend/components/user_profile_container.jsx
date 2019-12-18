@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import UserProfile from './user_profile';
 import { fetchReservations } from '../actions/reservation_actions';
+import { fetchCampsites } from '../actions/campsite_actions';
+import { openModal } from '../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -13,7 +15,9 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchReservations: () => dispatch(fetchReservations())
+    fetchReservations: () => dispatch(fetchReservations()),
+    fetchCampsites: () => dispatch(fetchCampsites()),
+    openModal: (action) => dispatch(openModal(action))
   };
 };
 

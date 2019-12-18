@@ -8,6 +8,7 @@
 
 Campsite.destroy_all
 User.destroy_all
+Review.destroy_all
 
 camp1 = Campsite.create!(
   name: "Brewster River Camping",
@@ -195,4 +196,34 @@ demo_user = User.create!(
   last_name: "Lozeau",
   zip_code: 11237,
   password: "123456"
+)
+
+reservation1 = Reservation.create!(
+  campsite_id: camp1.id,
+  camper_id: demo_user.id,
+  start_date: "2019-12-10",
+  end_date: "2019-12-17"
+)
+
+reservation2 = Reservation.create!(
+  campsite_id: camp2.id,
+  camper_id: demo_user.id,
+  start_date: "2019-12-01",
+  end_date: "2019-12-07"
+)
+
+review1 = Review.create!(
+  campsite_id: reservation1.campsite_id,
+  reservation_id: reservation1.id,
+  title: "So great! Such fun!",
+  body: "Really enjoyed the time here and the host was awesome!",
+  rating: 5
+)
+
+review2 = Review.create!(
+  campsite_id: reservation2.campsite_id,
+  reservation_id: reservation2.id,
+  title: "So great! Such fun!",
+  body: "Really enjoyed the time here and the host was awesome!",
+  rating: 5
 )
