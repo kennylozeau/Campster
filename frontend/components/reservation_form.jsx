@@ -22,6 +22,13 @@ class ReservationForm extends React.Component {
     this.isHighlighted = this.isHighlighted.bind(this);
   }
 
+  // componentDidUpdate(prevProps) {
+  //   debugger
+  //   if (prevProps.currentUserId !== this.props.currentUserId) {
+
+  //   }
+  // }
+
   handleSubmit(event) {
     event.preventDefault();
     
@@ -33,7 +40,8 @@ class ReservationForm extends React.Component {
     }
     // debugger
     if (this.props.currentUserId) {
-      this.props.createReservation(reservation);
+      this.props.createReservation(reservation)
+        .then(this.props.history.push(`/users/${this.state.camperId}`));
     } else {
       this.props.openModal('login');
     }
@@ -48,12 +56,7 @@ class ReservationForm extends React.Component {
   }
 
   render() {
-    
-    // let today = new Date();
-    // const month = today.getMonth() + 1;
-    // const day = today.getDate();
-    // const year = today.getFullYear();
-    // today = `${year}-${month}-${day}`;
+    // debugger
     return (
       <form className="reservation-form" onSubmit={this.handleSubmit}>
         <div className="date-picker-input-container">

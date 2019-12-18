@@ -91,7 +91,7 @@ camp9 = Campsite.create!(
 )
 
 camp10 = Campsite.create!(
-  name: "Central Park",
+  name: "Central Park North",
   description: "Beautiful views of peaks in the distance",
   latitude: 40.796658,
   longitude: -73.955811,
@@ -127,10 +127,10 @@ camp13 = Campsite.create!(
 )
 
 camp14 = Campsite.create!(
-  name: "Maria Hernandez Park",
+  name: "Variety Coffee Camping",
   description: "Beautiful views of peaks in the distance",
-  latitude: 40.70272,
-  longitude: -73.924625,
+  latitude: 40.702809,
+  longitude: -73.916936,
   location: "Brooklyn, NY",
   price: 12.0
 )

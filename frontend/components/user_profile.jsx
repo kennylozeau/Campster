@@ -1,4 +1,5 @@
 import React from 'react';
+import UserPanes from './user_panes';
 
 class UserProfile extends React.Component {
 
@@ -13,18 +14,7 @@ class UserProfile extends React.Component {
   render() {
     if (this.props.currentUser) {
       const { currentUser, reservations } = this.props;
-      const reservationsList = reservations.map(reservation => {
-        if (reservation.camper_id === currentUser.id) {
-          return (
-            <li key={reservation.id} >{reservation.campsite_id} {reservation.start_date} through {reservation.end_date}</li>
-          );
-        } else {
-          return (
-            null
-          );
-        };
-      });
-
+      
       return (
         <div className="profile-container">
           <div className="profile-panels">
@@ -37,9 +27,7 @@ class UserProfile extends React.Component {
 
               </div>
             </section>
-            <section className="main-panel">
-              {reservationsList}
-            </section>
+            <UserPanes currentUser={currentUser} reservations={reservations}/>
           </div>
         </div>
       )
