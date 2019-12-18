@@ -1,36 +1,68 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const NavBar = (props) => {
+class NavBar extends React.Component {
 
-  const handleLogout = () => {
-    props.logout();
+  constructor(props) {
+    super(props);
+    this.state = {
+      dropDown: "hidden"
+    };
+
+    this.handleLogout = this.handleLogout.bind(this);
+    this.mouseEnter = this.mouseEnter.bind(this);
+    this.mouseLeave = this.mouseLeave.bind(this);
   }
 
-  if (props.currentUser) {
-    return (
-      <nav className="nav-header">
-        <h2 id="logo"><a href="/" >CAMPSTER</a></h2>
-        <div>
-          <button className="logout" onClick={() => handleLogout()}>Log out</button>
-        </div>
-      </nav>
-    )
-  } else {
-    return (
-      <nav className="nav-header">
-        <h2 id="logo"><a href="/" >CAMPSTER</a></h2>
-        <div>
-          <button className="login" >Near Me</button>
-          <button className="login" >Become a Host</button>
-          <button className="login" >About</button>
-          <button className="login" >Earn Campcash</button>
-          <button className="login" onClick={() => props.openModal('login')}>Log in</button>
-          <button className="signup" onClick={() => props.openModal('signup')}>Sign up</button>
-        </div>
-      </nav>
-    );
+  handleLogout() {
+    this.props.logout()
+      .then(this.mouseLeave());
   }
 
+  mouseEnter() {
+    this.setState({dropDown: ""});
+  }
+
+  mouseLeave() {
+    this.setState({ dropDown: "hidden" });
+  }
+
+  render() {
+    if (this.props.currentUser) {
+      const { currentUser } = this.props;
+      return (
+        <nav className="nav-header">
+          <div className={`${this.state.dropDown} dropdown-screen`}></div>
+          <h2 id="logo"><a href="/" >CAMPSTER</a></h2>
+          <div className="user-nav-dropdown-wrapper" onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}>
+            <div className="user-nav-dropdown-btn">
+              <ul className={`${this.state.dropDown} dropdown-menu`}>
+                <li className="dropdown-btn" ><Link to={`/users/${currentUser.id}`}>Manage account</Link></li>
+                <li className="dropdown-btn" >Become a Host</li>
+                <li className="dropdown-btn" >Refer Hosts</li>
+                <li className="dropdown-btn" >About Campster</li>
+                <li className="dropdown-btn" onClick={() => this.handleLogout()}>Log out</li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      )
+    } else {
+      return (
+        <nav className="nav-header">
+          <h2 id="logo"><a href="/" >CAMPSTER</a></h2>
+          <div>
+            <button className="login" >Near Me</button>
+            <button className="login" >Become a Host</button>
+            <button className="login" >About</button>
+            <button className="login" >Earn Campcash</button>
+            <button className="login" onClick={() => this.props.openModal('login')}>Log in</button>
+            <button className="signup" onClick={() => this.props.openModal('signup')}>Sign up</button>
+          </div>
+        </nav>
+      );
+    }
+  }
 };
 
 export default NavBar;
@@ -39,3 +71,5 @@ export default NavBar;
 /* <a href="/" className="logout" onClick={props.logout}>Log out</a>
 <a href="#" className="login" onClick={() => props.openModal('login')}>Log in</a>
 <a href="#" className="signup" onClick={() => props.openModal('signup')}>Sign up</a> */
+
+// <button className="logout" onClick={() => handleLogout()}>Log out</button>
