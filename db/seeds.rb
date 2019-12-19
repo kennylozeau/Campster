@@ -9,6 +9,7 @@
 Campsite.destroy_all
 User.destroy_all
 Review.destroy_all
+Reservation.destroy_all
 
 camp1 = Campsite.create!(
   name: "Brewster River Camping",

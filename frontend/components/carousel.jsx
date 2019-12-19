@@ -1,20 +1,50 @@
 import React from 'react';
+import CarouselItem from './carousel_item';
 
-const Carousel = props => {
+class Carousel extends React.Component {
 
-  // const { photos } = props;
+  constructor(props) {
+    super(props);
+    this.state = {
+      imageUrls: [
+        window.camp1URL,
+        window.camp2URL,
+        window.camp3URL
+      ]
+    }
 
-  const photos = [
-    <img src={window.camp1URL} height="200" />,
-    <img src={window.camp2URL} height="200" />,
-    <img src={window.camp3URL} height="200" />
-  ]
+    this.goBack = this.goBack.bind(this);
+    this.goForward = this.goForward.bind(this);
+  }
 
-  return (
-    <>
-      {photos}
-    </>
-  )
+  goBack() {
+    // event.stopPropagation();
+    let newArray = this.state.imageUrls;
+    newArray.push(newArray.shift());
+    this.setState({imageUrls: newArray});
+  }
+
+  goForward() {
+    // event.stopPropagation();
+    let newArray = this.state.imageUrls;
+    newArray.unshift(newArray.pop());
+    this.setState({ imageUrls: newArray });
+  }
+
+  render() {
+
+    return (
+      <>
+        <div className="go-back" onClick={() => this.goBack()}></div>
+        <div className="carousel-container">
+          <CarouselItem imageUrl={this.state.imageUrls[0]} />
+          <CarouselItem imageUrl={this.state.imageUrls[1]} />
+          <CarouselItem imageUrl={this.state.imageUrls[2]} />
+        </div>
+        <div className="go-forward" onClick={() => this.goForward()}></div>
+      </>
+    )    
+  }
 }
 
 export default Carousel;

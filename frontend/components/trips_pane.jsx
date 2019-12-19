@@ -15,9 +15,10 @@ class TripsPane extends React.Component {
   render() {
     
     const { currentUser, reservations, campsites } = this.props.props;
-
+    debugger
     const reservationsList = reservations.map(reservation => {
-      if (reservation.camper_id === currentUser.id) {
+      debugger
+      if (reservation.camper_id === currentUser.id && campsites[reservation.campsite_id]) {
         return (
           <li
             key={Math.floor(Math.random() * 9999)}

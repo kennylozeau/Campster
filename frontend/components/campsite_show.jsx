@@ -2,6 +2,8 @@ import React from 'react';
 import CampsiteMap from './campsite_map';
 import ReservationFormContainer from './reservation_form_container';
 import ReviewIndexContainer from './review_index_container';
+import Carousel from './carousel';
+
 
 class CampsiteShow extends React.Component {
   constructor(props) {
@@ -24,7 +26,7 @@ class CampsiteShow extends React.Component {
         <>
           <div className="campsite-show-container">
             <div className="photo-comp-placeholder">
-              <img src={window.camp1URL} width="100%"/>
+              <Carousel />
             </div>
             <div className="campsite-details-container">
               <div className="campsite-detail-header">
@@ -84,3 +86,5 @@ export default CampsiteShow;
 {/* <div className="res-widget-container">
   <div className="res-widget"></div>
 </div> */}
+
+// <img src={window.camp1URL} width="100%"/>

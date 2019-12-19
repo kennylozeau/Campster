@@ -8,9 +8,9 @@ class UserProfile extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchCampsites()
-      .then(this.props.fetchReservations()
-      .then(this.props.fetchUser(this.props.currentUser.id)));
+    this.props.fetchUser(this.props.currentUser.id)
+      .then(this.props.fetchCampsites())
+      .then(this.props.fetchReservations());
   }
 
   formatDate(date) {
