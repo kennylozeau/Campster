@@ -1,40 +1,6 @@
-/* .go-back {
-  height: 50px;
-  width: 50px;
-  background-color: lightgreen;
-  position: absolute;
-  top: 145px;
-  left: 5px;
-}
-
-.go-forward {
-  height: 50px;
-  width: 50px;
-  background-color: lightblue;
-  position: absolute;
-  top: 145px;
-  left: 245px;
-}
-
-.carousel-container {
-  height: 200px;
-  width: 200px;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.carousel-img {
-  max-height: 200px;
-  width: auto;
-  height: auto;
-  max-width: 200px;
-} */
-
 /* TEST FOR SHOW PAGE */
 
-.go-back {
+/* .go-back {
   height: 80px;
   width: 30px;
   background-color: black;
@@ -84,4 +50,4 @@
   /* max-width: 200px; */
   margin-left: 5px;
   margin-right: 5px;
-}
+} */

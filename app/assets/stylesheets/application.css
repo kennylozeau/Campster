@@ -21,7 +21,7 @@
  *= require profile
  *= require discover
  *= require review
- *= require sandbox
+ * require sandbox
  * require_tree .
  *= require_self
  */
