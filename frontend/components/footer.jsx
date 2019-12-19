@@ -6,7 +6,9 @@ const Footer = (props) => {
   return (
     <footer className="nav-footer">
       <h2>&copy; 2019 Campster, Inc. All rights reserved.</h2>
-      <div>ICONS</div>
+      <div>
+        <a href="https://github.com/kennylozeau/campster" className='login github' >GitHub</a>
+      </div>
     </footer>
   );
 };
