@@ -6,6 +6,10 @@ class DiscoverIndex extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     const campsiteList = this.props.campsites.map(campsite => {
       return <CampsiteIndexItem key={campsite.id} campsite={campsite} />

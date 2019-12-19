@@ -11,6 +11,7 @@ class CampsiteShow extends React.Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.fetchCampsite(this.props.match.params.campsiteId)
       .then(this.props.fetchReservations());
   }

@@ -28,13 +28,6 @@ class SearchBar extends React.Component {
 
   processSearch(location, callback) {
     const geocoder = new google.maps.Geocoder();
-    // geocoder.geocode(location, function (data) {
-    //   debugger
-    //   var lat = data[0].geometry.location.lat();
-    //   var lng = data[0].geometry.location.lng();
-    //   var origin = new google.maps.LatLng(lat, lng);
-    //   <Redirect to="/discover" />
-    // });
 
     geocoder.geocode({ 'address': location }, function (results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
@@ -46,7 +39,7 @@ class SearchBar extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const location = this.state.searchValue;
-    // debugger
+
     this.processSearch(location, this.submitSearch);
   }
 
@@ -71,32 +64,27 @@ class SearchBar extends React.Component {
       }
     });
 
-    // if (matches.length === 0) {
-    //   matches.push(['No matches']);
-    // }
-
     return matches;
   }
 
   selectCampsite(event) {
-    // debugger
+    
     const campsiteId = event.currentTarget.dataset.campsiteId;
     this.props.history.push(`/campsites/${campsiteId}`);
   }
 
   update(event) {
-    // debugger
+    
     this.setState({searchValue: event.currentTarget.value})
   }
 
   render() {
-    // debugger
+    
     let results = [];
-    // debugger
     
     let matches = this.matchingResults().map((result, i) => {
       const campsiteId = result[1];
-      // debugger
+      
       return (
         <li key={i} data-campsite-id={campsiteId} onMouseDown={(event) => this.selectCampsite(event)}><h2>{result[0]}</h2></li>
       );
@@ -104,7 +92,6 @@ class SearchBar extends React.Component {
 
     if (matches.length > 0) { results = matches }
 
-    // debugger
     return (
       <header>
         <div className="main-header">

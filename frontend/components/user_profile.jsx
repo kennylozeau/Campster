@@ -8,6 +8,7 @@ class UserProfile extends React.Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.fetchUser(this.props.currentUser.id)
       .then(this.props.fetchCampsites())
       .then(this.props.fetchReservations());

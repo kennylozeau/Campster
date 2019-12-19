@@ -47,13 +47,12 @@ class Modal extends React.Component {
 
   handleModalClose() {
     const { closeModal, clearErrors } = this.props;
-    // clearErrors();
     closeModal();
   }
 
   render () {
     const { modal } = this.props;
-    // debugger
+
     if (!modal.window) {
       return null;
     }
@@ -96,7 +95,6 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-  // debugger
   return {
     closeModal: () => dispatch(closeModal()),
     clearErrors: () => dispatch(clearErrors())

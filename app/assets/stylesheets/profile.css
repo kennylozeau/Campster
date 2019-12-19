@@ -7,10 +7,10 @@
 
 .profile-panels {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 4fr;
   grid-template-rows: 45px auto;
   margin-top: 55px;
-  width: 100%;
+  width: 80%;
 }
 
 .side-panel {
@@ -82,5 +82,18 @@
 
 .reservation-list-item {
   margin: 10px;
+  padding: 5px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid lightgrey;
 }
 
+.reservation-list-item:last-child {
+  border-bottom: 0px;
+}
+
+.reservation-list-item > h1 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}

@@ -1,7 +1,6 @@
 class Api::CampsitesController < ApplicationController
 
   def index
-    # debugger
     @campsites = bounds ? Campsite.in_bounds(bounds[:bounds]) : Campsite.all
     render :index
   end

@@ -48,6 +48,7 @@
   font-size: 40px;
   cursor: pointer;
   color: black;
+  text-shadow: 0px 0px 10px white;
 }
 
 .go-forward {
@@ -64,6 +65,7 @@
   font-size: 40px;
   cursor: pointer;
   color: black;
+  text-shadow: 0px 0px 10px white;
 }
 
 .carousel-container {

@@ -5,7 +5,7 @@ import DiscoverIndex from './discover_index';
 import DiscoverMap from './discover_map';
 
 const Discover = (props) => {
-  // debugger
+
   return (
     <div className="discover-container">
       <DiscoverIndex campsites={props.campsites} />

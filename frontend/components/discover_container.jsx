@@ -3,7 +3,6 @@ import { updateBounds } from '../actions/filter_actions';
 import Discover from './discover';
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger
   return {
     campsites: Object.values(state.entities.campsites),
     location: ownProps.location

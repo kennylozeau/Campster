@@ -15,9 +15,9 @@ class TripsPane extends React.Component {
   render() {
     
     const { currentUser, reservations, campsites } = this.props.props;
-    debugger
+    
     const reservationsList = reservations.map(reservation => {
-      debugger
+      
       if (reservation.camper_id === currentUser.id && campsites[reservation.campsite_id]) {
         return (
           <li
