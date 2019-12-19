@@ -3,7 +3,7 @@ import { Route, Link } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute} from '../util/route_util';
 import LoginFormContainer from './login_form_container';
 import NavBarContainer from './navbar_container';
-import Modal from './modal_test';
+import Modal from './modal';
 import CampsiteIndexContainer from './campsite_index_container';
 import CampsiteShowContainer from './campsite_show_container';
 import Footer from './footer';
