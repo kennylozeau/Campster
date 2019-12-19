@@ -1,16 +1,20 @@
 import { OPEN_MODAL, CLOSE_MODAL } from '../actions/modal_actions';
 
+const _nullState = {
+  action: null,
+  data: null
+}
 
-const modalReducer = (state = null, action) => {
+const modalReducer = (state = _nullState, action) => {
   Object.freeze(state);
   let newState = Object.assign({}, state);
-
   switch (action.type) {
     case OPEN_MODAL:
       newState = action.modal;
       return newState;
     case CLOSE_MODAL:
-      newState = null;
+      debugger
+      newState = _nullState;
       return newState;
     default:
       return state;

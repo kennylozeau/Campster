@@ -13,7 +13,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     createReservation: reservation => dispatch(createReservation(reservation)),
-    openModal: (action) => dispatch(openModal(action))
+    openModal: payload => dispatch(openModal(payload))
   };
 };
 

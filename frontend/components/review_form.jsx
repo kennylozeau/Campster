@@ -7,7 +7,8 @@ class ReviewForm extends React.Component {
       title: '',
       body: '',
       rating: '',
-      camper_id: this.props.currentUserId
+      reservation_id: this.props.reservationId,
+      campsite_id: this.props.campsiteId
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -47,7 +48,7 @@ class ReviewForm extends React.Component {
             placeholder="Rating"
             value={this.state.rating}
             onChange={this.update('rating')} />
-          <button>Join Campster</button>
+          <button>Create review</button>
         </form>
       </>
     )

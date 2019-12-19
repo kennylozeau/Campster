@@ -5,9 +5,9 @@ import configureStore from './store/store';
 
 // IMPORTS FOR TESTING
 // import { signup, login, logout } from './actions/session_actions';
-import { fetchCampsites, fetchCampsite } from './actions/campsite_actions';
-import { fetchReservations, createReservation, updateReservation, cancelReservation } from './actions/reservation_actions';
-import { createReview } from './actions/review_actions';
+// import { fetchCampsites, fetchCampsite } from './actions/campsite_actions';
+// import { fetchReservations, createReservation, updateReservation, cancelReservation } from './actions/reservation_actions';
+// import { createReview } from './actions/review_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
@@ -29,16 +29,16 @@ document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(<Root store={store} />, root);
 
   // FOR TESTING PURPOSES ONLY
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
+  // window.getState = store.getState;
+  // window.dispatch = store.dispatch;
   // window.signup = signup;
   // window.login = login;
   // window.logout = logout;
-  window.fetchCampsites = fetchCampsites;
+  // window.fetchCampsites = fetchCampsites;
   // window.fetchCampsite = fetchCampsite;
-  window.fetchReservations = fetchReservations;
-  window.createReservation = createReservation;
-  window.updateReservation = updateReservation;
-  window.cancelReservation = cancelReservation;
-  window.createReview = createReview;
+  // window.fetchReservations = fetchReservations;
+  // window.createReservation = createReservation;
+  // window.updateReservation = updateReservation;
+  // window.cancelReservation = cancelReservation;
+  // window.createReview = createReview;
 });

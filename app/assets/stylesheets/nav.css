@@ -60,8 +60,8 @@
 }
 
 #logo {
-  /* font-family: Optima, sans-serif; */
   font-family: 'Archivo', sans-serif;
+  font-weight: 600;
   font-size: 25px;
   margin-left: 25px;
 }

@@ -13,7 +13,7 @@ const mapStateToProps = ({ entities, session }) => {
 const mapDispatchToProps = dispatch => {
   return {
     logout: () => dispatch(logout()),
-    openModal: (action) => dispatch(openModal(action))
+    openModal: payload => dispatch(openModal(payload))
   };
 };
 

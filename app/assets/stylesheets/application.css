@@ -20,12 +20,14 @@
  *= require search_bar
  *= require profile
  *= require discover
+ *= require review
  * require_tree .
  *= require_self
  */
 
 body {
-  font-family: Helvetica, sans-serif;
+  /* font-family: Helvetica, sans-serif; */
+  font-family: 'Archivo', sans-serif;
 }
 
 .hidden {

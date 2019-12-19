@@ -1,9 +1,10 @@
 class Api::ReviewsController < ApplicationController
 
   def create
-    reservation = Reservation.find(params[:reservation_id])
-    debugger
-    @review = reservation.reviews.new(review_params)
+    # reservation = Reservation.find(params[:reservation_id])
+    
+    # @review = reservation.reviews.new(review_params)
+    @review = Review.new(review_params)
 
     if @review.save
       render json: {message: "success"}
@@ -16,7 +17,7 @@ class Api::ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:campsite_id, :title, :body, :rating)
+    params.require(:review).permit(:campsite_id, :reservation_id, :title, :body, :rating)
   end
 
 end

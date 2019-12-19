@@ -66,7 +66,7 @@ class SignupForm extends React.Component {
           <button>Join Campster</button>
         </form>
         <footer className="modal-footer">
-          <h2>Already have an account? <button onClick={() => openModal('login')}>Log in!</button></h2>
+          <h2>Already have an account? <button onClick={() => openModal({action: 'login'})}>Log in!</button></h2>
         </footer>
       </>
     )

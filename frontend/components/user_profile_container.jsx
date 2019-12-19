@@ -17,7 +17,7 @@ const mapDispatchToProps = dispatch => {
   return {
     fetchReservations: () => dispatch(fetchReservations()),
     fetchCampsites: () => dispatch(fetchCampsites()),
-    openModal: (action) => dispatch(openModal(action))
+    openModal: payload => dispatch(openModal(payload))
   };
 };
 

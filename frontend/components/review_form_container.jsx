@@ -6,7 +6,9 @@ import { closeModal } from '../actions/modal_actions';
 
 const mapStateToProps = state => {
   return {
-    currentUserId: state.session.id
+    currentUserId: state.session.id,
+    campsiteId: state.ui.modal.data.campsiteId,
+    reservationId: state.ui.modal.data.reservationId
   };
 };
 

@@ -53,11 +53,20 @@
   margin-left: 13%;
   height: 125px;
   width: 350px;
-  background-color: white;
-  z-index: 10;
+  background-color: #f9f9f9;
+  z-index: 9;
   border: 1px solid lightgrey;
+  /* padding: 10px; */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.map-campsite-subdetails {
+  display: flex;
+  justify-content: space-between;
   padding: 10px;
-  box-sizing: border-box;;
 }
 
 .res-widget {
@@ -88,8 +97,8 @@
 .campsite-details-container {
   grid-row: 2 / span 1;
   grid-column: 2 / span 1;
-  border: 1px solid lightgrey;
-  height: 600px;
+  /* border: 1px solid lightgrey; */
+  /* height: 600px; */
   width: 100%;
   padding: 15px;
 }
@@ -125,4 +134,10 @@
 .campsite-detail-body {
   display: grid;
   grid-template-columns: 220px 1fr;
+}
+
+.map-campsite-details-price {
+  background-color: white;
+  padding: 17px;
+  padding-left: 10px;
 }

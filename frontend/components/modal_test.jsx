@@ -53,13 +53,13 @@ class Modal extends React.Component {
 
   render () {
     const { modal } = this.props;
-
-    if (!modal) {
+    debugger
+    if (!modal.action) {
       return null;
     }
-
+    
     let component;
-    switch (modal) {
+    switch (modal.action) {
       case 'login':
         component = <DemoLoginContainer />;
         break;
@@ -70,7 +70,7 @@ class Modal extends React.Component {
         component = <SignupFormContainer />;
         break;
       case 'review':
-        component = <ReviewFormContainer />;
+        component = <ReviewFormContainer data={modal.data}/>;
         break;
       default:
         return null;
@@ -96,6 +96,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
+  // debugger
   return {
     closeModal: () => dispatch(closeModal()),
     clearErrors: () => dispatch(clearErrors())

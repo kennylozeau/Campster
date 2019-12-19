@@ -1,0 +1,46 @@
+.review-container {
+  border-bottom: 1px solid lightgrey;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-container:last-child {
+  border-bottom: 0px;
+}
+
+.campsite-reviews {
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 1;
+  margin-top: 50px;
+  width: 90%;
+}
+
+.campsite-reviews > h1 {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.review-header > h1 {
+  font-weight: 600;
+  /* font-size: 15px; */
+}
+
+.review-body {
+  padding: 5px;
+}
+
+.review-body > h1 {
+  margin-bottom: 15px;
+}
+
+.review-body > h2 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}

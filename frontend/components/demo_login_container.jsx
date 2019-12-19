@@ -6,7 +6,7 @@ import { openModal, closeModal } from '../actions/modal_actions';
 
 const mapDispatchToProps = dispatch => {
   return {
-    openModal: action => dispatch(openModal(action)),
+    openModal: payload => dispatch(openModal(payload)),
     login: user => dispatch(login(user)),
     closeModal: () => dispatch(closeModal())
   };

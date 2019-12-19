@@ -1,6 +1,7 @@
 import React from 'react';
 import CampsiteMap from './campsite_map';
 import ReservationFormContainer from './reservation_form_container';
+import ReviewIndexContainer from './review_index_container';
 
 class CampsiteShow extends React.Component {
   constructor(props) {
@@ -44,13 +45,24 @@ class CampsiteShow extends React.Component {
           <div className="campsite-show-container">
             <div className="show-page-map-container">
               <aside className="map-campsite-details">
-                <label>Property
-
-                </label>
+                <div className="map-campsite-subdetails">
+                  <h1>Property</h1>
+                  <h2>{campsite.name}</h2>
+                </div>
+                <div className="map-campsite-subdetails">
+                  <h1>Location</h1>
+                  <h2>{campsite.location}</h2>
+                </div>
+                <div className="map-campsite-details-price">
+                  <h1>${price}/night</h1>
+                </div>
               </aside>
               <CampsiteMap mapType={"show-page-map"} campsite={this.props.campsite} />
             </div>
-            <div className="content-filler"></div>
+            <div className="campsite-reviews">
+              <h1>Camper reviews for {campsite.name}</h1>
+              <ReviewIndexContainer />
+            </div>
           </div>
         </>
       )
