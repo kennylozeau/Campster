@@ -63,7 +63,7 @@ class CampsiteShow extends React.Component {
             </div>
             <div className="campsite-reviews">
               <h1>Camper reviews for {campsite.name}</h1>
-              <ReviewIndexContainer />
+              <ReviewIndexContainer showId={campsite.id}/>
             </div>
           </div>
         </>

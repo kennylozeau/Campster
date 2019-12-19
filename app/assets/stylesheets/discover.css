@@ -2,7 +2,7 @@
 /* PASS IN AS PROP WHEN RENDERING NEW MAP, SET SIZE */
 .discover-map {
   /* height: 785px; */
-  height: 720px;
+  height: 770px;
   width: 500px;
   grid-column: 3 / span 1;
 }
