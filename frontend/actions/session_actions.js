@@ -11,10 +11,10 @@ export const clearErrors = () => {
   };
 };
 
-const receiveCurrentUser = user => {
+export const receiveCurrentUser = payload => {
   return {
     type: RECEIVE_CURRENT_USER,
-    user
+    payload
   };
 };
 
@@ -47,5 +47,11 @@ export const login = user => dispatch => {
 export const logout = () => dispatch => {
   return SessionApiUtils.logout()
     .then(() => dispatch(logoutCurrentUser()),
+      errMsg => dispatch(receiveErrors(errMsg.responseJSON)))
+}
+
+export const fetchUser = userId => dispatch => {
+  return SessionApiUtils.fetchUser(userId)
+    .then(user => dispatch(receiveCurrentUser(user)),
       errMsg => dispatch(receiveErrors(errMsg.responseJSON)))
 }

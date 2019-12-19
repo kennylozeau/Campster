@@ -1,5 +1,6 @@
 import React from 'react';
 import TripsPane from './trips_pane';
+import ReviewsPane from './reviews_pane';
 
 class UserPanes extends React.Component {
   constructor(props) {
@@ -27,7 +28,7 @@ class UserPanes extends React.Component {
         </div>
         <section className="main-pane">
           <div className="main-pane-content">
-            {this.state.selectedPane === 'trips' ? <TripsPane props={this.props} /> : <h1>Test</h1>}
+            {this.state.selectedPane === 'trips' ? <TripsPane props={this.props} /> : <ReviewsPane props={this.props} />}
           </div>
         </section>
       </>

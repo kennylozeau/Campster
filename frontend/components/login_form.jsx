@@ -43,7 +43,7 @@ class LoginForm extends React.Component {
           <button>Log In</button>
         </form>
         <footer className="modal-footer">
-          <h2>Don't have a Campster account? <button onClick={() => openModal({action: 'signup'})}>Sign up!</button></h2>
+          <h2>Don't have a Campster account? <button onClick={() => openModal({window: 'signup'})}>Sign up!</button></h2>
         </footer>
       </>
     )

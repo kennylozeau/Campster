@@ -47,19 +47,19 @@ class Modal extends React.Component {
 
   handleModalClose() {
     const { closeModal, clearErrors } = this.props;
-    clearErrors();
+    // clearErrors();
     closeModal();
   }
 
   render () {
     const { modal } = this.props;
-    debugger
-    if (!modal.action) {
+    // debugger
+    if (!modal.window) {
       return null;
     }
     
     let component;
-    switch (modal.action) {
+    switch (modal.window) {
       case 'login':
         component = <DemoLoginContainer />;
         break;

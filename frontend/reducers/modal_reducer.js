@@ -1,7 +1,7 @@
 import { OPEN_MODAL, CLOSE_MODAL } from '../actions/modal_actions';
 
 const _nullState = {
-  action: null,
+  window: null,
   data: null
 }
 
@@ -13,7 +13,7 @@ const modalReducer = (state = _nullState, action) => {
       newState = action.modal;
       return newState;
     case CLOSE_MODAL:
-      debugger
+      newState = {};
       newState = _nullState;
       return newState;
     default:

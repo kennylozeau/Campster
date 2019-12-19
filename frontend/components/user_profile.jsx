@@ -9,20 +9,25 @@ class UserProfile extends React.Component {
 
   componentDidMount() {
     this.props.fetchCampsites()
-      .then(this.props.fetchReservations());
+      .then(this.props.fetchReservations()
+      .then(this.props.fetchUser(this.props.currentUser.id)));
+  }
+
+  formatDate(date) {
+    return new Date(date).toLocaleDateString();
   }
 
   render() {
     if (this.props.currentUser && this.props.reservations && this.props.campsites) {
-      const { currentUser, reservations, campsites, openModal } = this.props;
+      const { currentUser, reservations, campsites, openModal, reviews } = this.props;
       
       return (
         <div className="profile-container">
           <div className="profile-panels">
             <section className="side-panel">
               <div className="user-panel">
-                <h1>{currentUser.first_name} {currentUser.last_name[0]}</h1>
-                <h3>Campster member since {currentUser.created_at}</h3>
+                <h1>{currentUser.first_name} {currentUser.last_name[0]}.</h1>
+                <h3>Campster member since {this.formatDate(currentUser.created_at)}</h3>
               </div>
               <div className="campster-cash-panel">
 
@@ -32,7 +37,8 @@ class UserProfile extends React.Component {
               currentUser={currentUser}
               reservations={reservations}
               campsites={campsites}
-              openModal={openModal} />
+              openModal={openModal}
+              reviews={reviews} />
           </div>
         </div>
       )

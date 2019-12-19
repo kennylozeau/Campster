@@ -31,9 +31,9 @@ class DemoLogin extends React.Component {
             <h2>Time to plan another camping trip</h2>
           </header>
           <button className="demo-login-btn" onClick={this.handleDemoLogin}>Demo Login</button>
-          <button className="email-login-btn" onClick={() => this.props.openModal({action: 'email'})}>Login with email</button>
+          <button className="email-login-btn" onClick={() => this.props.openModal({window: 'email'})}>Login with email</button>
           <footer className="modal-footer">
-            <h2>Don't have a Campster account? <button onClick={() => openModal({action: 'signup'})}>Sign up!</button></h2>
+            <h2>Don't have a Campster account? <button onClick={() => openModal({window: 'signup'})}>Sign up!</button></h2>
           </footer>
         </div>
       </>

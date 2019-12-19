@@ -15,11 +15,20 @@ class ReviewIndex extends React.Component {
       )
     })
 
-    return (
-      <>
-        {reviewsList}
-      </>
-    )
+    if (reviewsList.length > 0) {
+      return (
+        <>
+          {reviewsList}
+        </>
+      )
+    } else {
+      return (
+        <>
+          <h3 className="no-reviews" >No reviews yet!</h3>
+        </>
+      )
+    }
+    
   }
 }
 

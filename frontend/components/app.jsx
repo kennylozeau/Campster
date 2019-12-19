@@ -11,6 +11,7 @@ import CampsiteMap from './campsite_map';
 import UserProfileContainer from './user_profile_container';
 import SearchBarContainer from './search_bar_container';
 import DiscoverContainer from './discover_container';
+import Carousel from './carousel';
 
 const App = (props) => {
   return(
@@ -18,6 +19,7 @@ const App = (props) => {
       <Modal />
       <div className="navbar-container"><NavBarContainer /></div>
 
+      <Route exact path="/sandbox" component={Carousel} />
 
       {/* <Route path="/login" component={LoginFormContainer} /> */}
       {/* <Route path="/discover" component={CampsiteIndexContainer} /> */}

@@ -43,7 +43,7 @@ class ReservationForm extends React.Component {
       this.props.createReservation(reservation)
         .then(this.props.history.push(`/users/${this.state.camperId}`));
     } else {
-      this.props.openModal({action: 'login'});
+      this.props.openModal({window: 'login'});
     }
   }
 

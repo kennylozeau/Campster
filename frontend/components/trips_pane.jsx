@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from 'react-dom';
 
 class TripsPane extends React.Component {
 
@@ -10,7 +9,7 @@ class TripsPane extends React.Component {
   }
 
   handleClick(reservation) {
-    this.props.props.openModal({ action: 'review', data: {reservationId: reservation.id, campsiteId: reservation.campsite_id}});
+    this.props.props.openModal({ window: 'review', data: {reservationId: reservation.id, campsiteId: reservation.campsite_id}});
   }
 
   render() {
