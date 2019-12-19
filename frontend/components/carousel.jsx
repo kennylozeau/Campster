@@ -35,13 +35,13 @@ class Carousel extends React.Component {
 
     return (
       <>
-        <div className="go-back" onClick={() => this.goBack()}></div>
+        <div className="go-back" onClick={() => this.goBack()}>❮</div>
         <div className="carousel-container">
           <CarouselItem imageUrl={this.state.imageUrls[0]} />
           <CarouselItem imageUrl={this.state.imageUrls[1]} />
           <CarouselItem imageUrl={this.state.imageUrls[2]} />
         </div>
-        <div className="go-forward" onClick={() => this.goForward()}></div>
+        <div className="go-forward" onClick={() => this.goForward()}>❯</div>
       </>
     )    
   }

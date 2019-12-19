@@ -35,27 +35,41 @@
 /* TEST FOR SHOW PAGE */
 
 .go-back {
-  height: 50px;
-  width: 50px;
-  background-color: lightgreen;
+  height: 80px;
+  width: 30px;
+  background-color: black;
   position: absolute;
-  top: 145px;
-  left: 5px;
+  top: 285px;
+  left: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  font-size: 40px;
+  cursor: pointer;
+  color: black;
 }
 
 .go-forward {
-  height: 50px;
-  width: 50px;
-  background-color: lightblue;
+  height: 80px;
+  width: 30px;
+  background-color: black;
   position: absolute;
-  top: 145px;
-  left: 245px;
+  top: 285px;
+  right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  font-size: 40px;
+  cursor: pointer;
+  color: black;
 }
 
 .carousel-container {
   height: 480px;
-  width: 110%;
-  background-color: black;
+  /* width: 110%; */
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,4 +80,6 @@
   /* width: 110%; */
   height: auto;
   /* max-width: 200px; */
+  margin-left: 5px;
+  margin-right: 5px;
 }
