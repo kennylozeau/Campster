@@ -118,3 +118,4 @@ handleFocus() {
   * Campers will be able offer their property as a campsite
   * Campers will be able to upload descriptions, details, and photos
 * Ability to attach photos to campsite reviews
+* Campsite show page widgets which display data such as local weather and elevation
