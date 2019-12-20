@@ -55,6 +55,8 @@
   color: #757575;
   margin: 5px;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .campsite-details {
