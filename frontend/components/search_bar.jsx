@@ -58,8 +58,8 @@ class SearchBar extends React.Component {
     }
 
     this.props.campsites.forEach(campsite => {
-      const sub = campsite.name.slice(0, this.state.searchValue.length);
-      if (sub.toLowerCase() === this.state.searchValue.toLowerCase()) {
+      const subString = campsite.name.slice(0, this.state.searchValue.length);
+      if (subString.toLowerCase() === this.state.searchValue.toLowerCase()) {
         matches.push([campsite.name, campsite.id]);
       }
     });
@@ -111,7 +111,6 @@ class SearchBar extends React.Component {
                 onChange={this.update}
                 onBlur={this.handleBlur}
                 placeholder="Find camping near..."
-
                 onFocus={this.handleFocus} />
               <ul className={`search-results-dropdown ${this.state.showResults}`}>
                 {results}
