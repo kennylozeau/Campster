@@ -110,7 +110,7 @@ class SearchBar extends React.Component {
                 value={this.state.searchValue}
                 onChange={this.update}
                 onBlur={this.handleBlur}
-                placeholder="Search..."
+                placeholder="Find camping near..."
 
                 onFocus={this.handleFocus} />
               <ul className={`search-results-dropdown ${this.state.showResults}`}>
