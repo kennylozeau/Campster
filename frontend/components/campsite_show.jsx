@@ -23,11 +23,25 @@ class CampsiteShow extends React.Component {
       const { campsite } = this.props;
       const price = campsite.price.toFixed(0);
 
+      // TEMPORARY CODE FOR DEMONSTRATION
+      let sitePhotoId1 = campsite.id % 27;
+      let sitePhotoId2 = (campsite.id + 12) % 27;
+      let sitePhotoId3 = (campsite.id + 24) % 27;
+      if (sitePhotoId1 === 0) { sitePhotoId = 17 };
+      if (sitePhotoId2 === 0) { sitePhotoId = 17 };
+      if (sitePhotoId3 === 0) { sitePhotoId = 17 };
+
+      const sitePhotos = [
+        window[`camp${sitePhotoId1}URL`],
+        window[`camp${sitePhotoId2}URL`],
+        window[`camp${sitePhotoId3}URL`]
+      ];
+
       return (
         <>
           <div className="campsite-show-container">
             <div className="photo-comp-placeholder">
-              <Carousel />
+              <Carousel imageUrls={sitePhotos}/>
             </div>
             <div className="campsite-details-container">
               <div className="campsite-detail-header">

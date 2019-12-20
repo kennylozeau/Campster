@@ -18,9 +18,16 @@ class CampsiteIndexItem extends React.Component {
     const { campsite } = this.props;
     const price = campsite.price.toFixed(0);
 
+    // TEMPORARY CODE FOR DEMONSTRATION
+    let sitePhotoId = campsite.id % 27;
+    if (sitePhotoId === 0) { sitePhotoId = 17 }
+    const sitePhoto = `camp${sitePhotoId}URL`;
+
     return (
       <article className="campsite-entry" onClick={this.handleClick}>
-        <img src={window.camp1URL} height="200" />
+        <div className="index-photo-container">
+          <img src={window[sitePhoto]} className="index-photo" />
+        </div>
         <summary className="campsite-details">
           <div>
             <h1>{campsite.name}</h1>

@@ -6,12 +6,8 @@ class Carousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      imageUrls: [
-        window.camp1URL,
-        window.camp2URL,
-        window.camp3URL
-      ]
-    }
+      imageUrls: this.props.imageUrls
+    };
 
     this.goBack = this.goBack.bind(this);
     this.goForward = this.goForward.bind(this);
