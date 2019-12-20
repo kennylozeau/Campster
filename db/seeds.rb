@@ -209,14 +209,28 @@ reservation1 = Reservation.create!(
 reservation2 = Reservation.create!(
   campsite_id: camp2.id,
   camper_id: demo_user.id,
-  start_date: "2019-12-01",
-  end_date: "2019-12-07"
+  start_date: "2019-03-12",
+  end_date: "2019-07-16"
+)
+
+reservation3 = Reservation.create!(
+  campsite_id: camp6.id,
+  camper_id: demo_user.id,
+  start_date: "2019-08-01",
+  end_date: "2019-08-10"
+)
+
+reservation4 = Reservation.create!(
+  campsite_id: camp13.id,
+  camper_id: demo_user.id,
+  start_date: "2018-03-01",
+  end_date: "2018-04-10"
 )
 
 review1 = Review.create!(
   campsite_id: reservation1.campsite_id,
   reservation_id: reservation1.id,
-  title: "So great! Such fun!",
+  title: "Wonderful place to get away from the city",
   body: "Really enjoyed the time here and the host was awesome!",
   rating: 5
 )
@@ -224,7 +238,7 @@ review1 = Review.create!(
 review2 = Review.create!(
   campsite_id: reservation2.campsite_id,
   reservation_id: reservation2.id,
-  title: "So great! Such fun!",
-  body: "Really enjoyed the time here and the host was awesome!",
+  title: "Can't wait to go back!",
+  body: "Loved everything about it!",
   rating: 5
 )
