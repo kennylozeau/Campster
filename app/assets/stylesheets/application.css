@@ -29,6 +29,8 @@
 body {
   /* font-family: Helvetica, sans-serif; */
   font-family: 'Archivo', sans-serif;
+  letter-spacing: 0.5px;
+  /* font-family: 'Archivo Narrow', sans-serif; */
 }
 
 .hidden {

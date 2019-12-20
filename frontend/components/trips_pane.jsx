@@ -26,6 +26,7 @@ class TripsPane extends React.Component {
             onClick={() => this.handleClick(reservation)}>
             <h1>{campsites[reservation.campsite_id].name}</h1>
             <h2>{reservation.start_date} through {reservation.end_date}</h2>
+            <h3>Write a review!</h3>
           </li>
         );
       } else {

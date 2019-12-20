@@ -136,6 +136,11 @@
   grid-template-columns: 220px 1fr;
 }
 
+.campsite-detail-body p {
+  margin-bottom: 10px;
+  line-height: 150%;
+}
+
 .map-campsite-details-price {
   background-color: white;
   padding: 17px;

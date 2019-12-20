@@ -53,7 +53,7 @@ camp5 = Campsite.create!(
   latitude: 40.731147,
   longitude: -73.977182,
   location: "New York, NY",
-  price: 12.0
+  price: 27.0
 )
 
 camp6 = Campsite.create!(
@@ -62,7 +62,7 @@ camp6 = Campsite.create!(
   latitude: 40.751323,
   longitude: -73.983933,
   location: "New York, NY",
-  price: 12.0
+  price: 45.0
 )
 
 camp7 = Campsite.create!(
@@ -71,7 +71,7 @@ camp7 = Campsite.create!(
   latitude: 40.753758,
   longitude: -73.983579,
   location: "New York, NY",
-  price: 12.0
+  price: 32.0
 )
 
 camp8 = Campsite.create!(
@@ -80,7 +80,7 @@ camp8 = Campsite.create!(
   latitude: 40.768438,
   longitude: -73.977871,
   location: "New York, NY",
-  price: 12.0
+  price: 65.0
 )
 
 camp9 = Campsite.create!(
@@ -89,7 +89,7 @@ camp9 = Campsite.create!(
   latitude: 40.773443,
   longitude: -73.973075,
   location: "New York, NY",
-  price: 12.0
+  price: 10.0
 )
 
 camp10 = Campsite.create!(
@@ -98,7 +98,7 @@ camp10 = Campsite.create!(
   latitude: 40.796658,
   longitude: -73.955811,
   location: "New York, NY",
-  price: 12.0
+  price: 55.0
 )
 
 camp11 = Campsite.create!(
@@ -107,7 +107,7 @@ camp11 = Campsite.create!(
   latitude: 40.701938,
   longitude: -73.915087,
   location: "Brooklyn, NY",
-  price: 12.0
+  price: 7.0
 )
 
 camp12 = Campsite.create!(
@@ -116,7 +116,7 @@ camp12 = Campsite.create!(
   latitude: 40.700970,
   longitude: -73.913875,
   location: "Brooklyn, NY",
-  price: 12.0
+  price: 14.0
 )
 
 camp13 = Campsite.create!(
@@ -134,7 +134,7 @@ camp14 = Campsite.create!(
   latitude: 40.702809,
   longitude: -73.916936,
   location: "Brooklyn, NY",
-  price: 12.0
+  price: 23.0
 )
 
 camp15 = Campsite.create!(
@@ -143,7 +143,7 @@ camp15 = Campsite.create!(
   latitude: 40.670215,
   longitude: -73.969858,
   location: "Brooklyn, NY",
-  price: 12.0
+  price: 25.0
 )
 
 camp16 = Campsite.create!(
@@ -152,7 +152,7 @@ camp16 = Campsite.create!(
   latitude: 40.655851,
   longitude: -73.965041,
   location: "Brooklyn, NY",
-  price: 12.0
+  price: 30.0
 )
 
 camp17 = Campsite.create!(
@@ -161,7 +161,7 @@ camp17 = Campsite.create!(
   latitude: 40.651879,
   longitude: -73.971822,
   location: "Brooklyn, NY",
-  price: 12.0
+  price: 11.0
 )
 
 camp18 = Campsite.create!(
@@ -170,7 +170,7 @@ camp18 = Campsite.create!(
   latitude: 40.691998,
   longitude: -74.018321,
   location: "New York, NY",
-  price: 12.0
+  price: 32.0
 )
 
 camp19 = Campsite.create!(
@@ -179,7 +179,7 @@ camp19 = Campsite.create!(
   latitude: 40.703671,
   longitude: -74.017463,
   location: "New York, NY",
-  price: 12.0
+  price: 37.0
 )
 
 camp20 = Campsite.create!(
@@ -188,7 +188,7 @@ camp20 = Campsite.create!(
   latitude: 40.808878,
   longitude: -74.239791,
   location: "West Orange, NJ",
-  price: 12.0
+  price: 9.0
 )
 
 demo_user = User.create!(

@@ -27,9 +27,9 @@ class CampsiteShow extends React.Component {
       let sitePhotoId1 = campsite.id % 27;
       let sitePhotoId2 = (campsite.id + 12) % 27;
       let sitePhotoId3 = (campsite.id + 24) % 27;
-      if (sitePhotoId1 === 0) { sitePhotoId = 17 };
-      if (sitePhotoId2 === 0) { sitePhotoId = 17 };
-      if (sitePhotoId3 === 0) { sitePhotoId = 17 };
+      if (sitePhotoId1 === 0) { sitePhotoId1 = 17 };
+      if (sitePhotoId2 === 0) { sitePhotoId2 = 17 };
+      if (sitePhotoId3 === 0) { sitePhotoId3 = 17 };
 
       const sitePhotos = [
         window[`camp${sitePhotoId1}URL`],
@@ -50,7 +50,28 @@ class CampsiteShow extends React.Component {
               </div>
               <div className="campsite-detail-body">
                 <div className="host-placeholder"></div>
-                <p>{campsite.description} Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quia itaque corporis animi. Voluptatem ipsum quo aperiam porro quasi sed consequuntur. Nam provident expedita aliquam eius, soluta perferendis earum sed! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quia itaque corporis animi. Voluptatem ipsum quo aperiam porro quasi sed consequuntur. Nam provident expedita aliquam eius, soluta perferendis earum sed! </p>
+                <div>
+                  <p>{campsite.description}</p>
+                  <p>Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Corrupti quia itaque corporis
+                animi. Voluptatem ipsum quo aperiam porro quasi sed
+                consequuntur. Nam provident expedita aliquam eius, soluta
+                perferendis earum sed! Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Corrupti quia itaque corporis animi.
+                Voluptatem ipsum quo aperiam porro quasi sed consequuntur.
+                Nam provident expedita aliquam eius, soluta perferendis
+                earum sed!</p>
+                <p>Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Corrupti quia itaque corporis
+                animi. Voluptatem ipsum quo aperiam porro quasi sed
+                consequuntur. Nam provident expedita aliquam eius, soluta
+                perferendis earum sed! Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Corrupti quia itaque corporis animi.
+                Voluptatem ipsum quo aperiam porro quasi sed consequuntur.
+                Nam provident expedita aliquam eius, soluta perferendis
+                earum sed!
+                </p>
+                </div>
               </div>
             </div>
             <div className="res-widget">

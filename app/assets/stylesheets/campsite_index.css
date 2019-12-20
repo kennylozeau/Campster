@@ -19,6 +19,7 @@
   /* height: auto; */
   height: 310px;
   overflow: hidden;
+  cursor: pointer;
   /* background-color: white; */
 }
 

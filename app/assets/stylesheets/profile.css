@@ -86,6 +86,7 @@
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid lightgrey;
+  cursor: pointer;
 }
 
 .reservation-list-item:last-child {
@@ -96,4 +97,13 @@
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 10px;
+}
+
+.reservation-list-item > h2 {
+  margin-bottom: 10px;
+}
+
+.reservation-list-item > h3 {
+  font-size: 16px;
+  font-weight: 600;
 }
