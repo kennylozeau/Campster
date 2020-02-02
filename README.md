@@ -23,7 +23,7 @@ Campster is a clone of [HipCamp.com](https://www.hipcam.com). This app allows us
   * Campers are able to create a Campster account, which then allows them to sign in and sign out
   * A demo account is also available for browsing Campster as a guest
 * Validations
-  * Campers are required to used a valid unique email address
+  * Campers are required to use a valid unique email address
   * Passwords must be at least 6 characters in length
 * Error Handling
   * User authentication errors are displayed temporarily on the page
