@@ -24,7 +24,7 @@
   background-color: rgb(173, 173, 173);
   grid-row: 1 / span 1;
   grid-column: 1 / span 4;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .show-page-map {
