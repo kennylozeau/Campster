@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class NavBar extends React.Component {
 
@@ -10,6 +10,9 @@ class NavBar extends React.Component {
     };
 
     this.handleLogout = this.handleLogout.bind(this);
+    this.handleNearBy = this.handleNearBy.bind(this);
+    this.showLocation = this.showLocation.bind(this);
+    this.showError = this.showError.bind(this);
     this.mouseEnter = this.mouseEnter.bind(this);
     this.mouseLeave = this.mouseLeave.bind(this);
   }
@@ -17,6 +20,32 @@ class NavBar extends React.Component {
   handleLogout() {
     this.props.logout()
       .then(this.mouseLeave());
+  }
+
+  handleNearBy() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(this.showLocation, this.showError);
+    } else {
+      this.props.history.push({
+        pathname: '/discover',
+        search: `?lat=40.701982&lng=-73.9151944`
+      });
+    }
+  }
+
+  showLocation(position) {
+    let { latitude, longitude } = position.coords;
+    this.props.history.push({
+      pathname: '/discover',
+      search: `?lat=${latitude}&lng=${longitude}`
+    });
+  }
+
+  showError(error) {
+    this.props.history.push({
+      pathname: '/discover',
+      search: `?lat=40.701982&lng=-73.9151944`
+    });
   }
 
   mouseEnter() {
@@ -61,7 +90,7 @@ class NavBar extends React.Component {
         <nav className="nav-header">
           <h2 id="logo"><a href="/" >CAMPSTER</a></h2>
           <div>
-            <button className="login" >Near Me</button>
+            <button className="login" onClick={() => this.handleNearBy()}>Near Me</button>
             <button className="login" >Become a Host</button>
             <button className="login" >About</button>
             <button className="login" >Earn Campcash</button>
@@ -74,7 +103,7 @@ class NavBar extends React.Component {
   }
 };
 
-export default NavBar;
+export default withRouter(NavBar);
 
 // PREVIOUS FUNCTIONING LINKS
 /* <a href="/" className="logout" onClick={props.logout}>Log out</a>
