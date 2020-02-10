@@ -19,6 +19,11 @@
   margin-top: 25px;
 }
 
+.subtotal {
+  align-self: flex-start;
+  margin-top: 25px;
+}
+
 .reservation-button {
   background-color: #40d9ac;
   color: white;

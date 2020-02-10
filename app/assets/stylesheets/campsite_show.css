@@ -83,15 +83,31 @@
   padding: 10px;
 }
 
+.res-widget.long {
+  height: 300px;
+  width: 320px;
+  background-color: white;
+  position: sticky;
+  grid-column: 3 / span 1;
+  grid-row: 1 / last-line;
+  top: 70px;
+  z-index: 8;
+  margin-top: 445px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
 .res-widget h1 {
   font-size: 26px;
   margin-top: 10px;
   margin-bottom: 5px;
+  margin-left: 20px;
 }
 
 .res-widget h3 {
   font-size: 16px;
   font-weight: 400;
+  margin-left: 20px;
 }
 
 .campsite-details-container {

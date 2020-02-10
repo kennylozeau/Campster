@@ -74,11 +74,7 @@ class CampsiteShow extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="res-widget">
-              <h1>${price}</h1>
-              <h3>per night</h3>
-              <ReservationFormContainer />
-            </div>
+            <ReservationFormContainer price={price}/>
           </div>
           <div className="campsite-show-container">
             <div className="show-page-map-container">
