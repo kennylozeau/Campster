@@ -88,7 +88,7 @@ class NavBar extends React.Component {
     } else {
       return (
         <nav className="nav-header">
-          <h2 id="logo"><a href="/" >CAMPSTER</a></h2>
+          <h2 id="logo"><Link to="/">CAMPSTER</Link></h2>
           <div>
             <button className="login" onClick={() => this.handleNearBy()}>Near Me</button>
             <button className="login" >Become a Host</button>
