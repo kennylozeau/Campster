@@ -10,7 +10,6 @@ class ReservationForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      camperId: this.props.currentUserId,
       campsiteId: this.props.match.params.campsiteId,
       startDate: null,
       endDate: null,
@@ -35,26 +34,26 @@ class ReservationForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    if (this.state.startDate === null) {
-      this.setState({ focusedStart: true });
-      return
-    }
-
-    if (this.state.endDate === null) {
-      this.setState({ focusedEnd: true });
-      return
-    }
-    
-    const reservation = {
-      camper_id: this.state.camperId,
-      campsite_id: this.state.campsiteId,
-      start_date: this.state.startDate.format('YYYY/MM/DD'),
-      end_date: this.state.endDate.format('YYYY/MM/DD')
-    }
-
     if (this.props.currentUserId) {
+      if (this.state.startDate === null) {
+        this.setState({ focusedStart: true });
+        return
+      }
+
+      if (this.state.endDate === null) {
+        this.setState({ focusedEnd: true });
+        return
+      }
+
+      const reservation = {
+        camper_id: this.props.currentUserId,
+        campsite_id: this.state.campsiteId,
+        start_date: this.state.startDate.format('YYYY/MM/DD'),
+        end_date: this.state.endDate.format('YYYY/MM/DD')
+      }
+
       this.props.createReservation(reservation)
-        .then(this.props.history.push(`/users/${this.state.camperId}`));
+        .then(this.props.history.push(`/users/${this.props.currentUserId}`));
     } else {
       this.props.openModal({window: 'login'});
     }
@@ -81,6 +80,12 @@ class ReservationForm extends React.Component {
       numDays = Math.round(Math.abs((this.state.startDate - this.state.endDate) / (60 * 60 * 24 * 1000)));
       cost = numDays * price
       subtotal = <h3 className="subtotal">Total cost: ${cost}</h3>;
+    }
+
+    let button = <button className="reservation-button">Log In</button>;
+
+    if (this.props.currentUserId) {
+      button = <button className="reservation-button">Book now</button>
     }
 
     return (
@@ -118,7 +123,7 @@ class ReservationForm extends React.Component {
             />
           </div>
           {subtotal}
-          <button className="reservation-button">Book now</button>
+          {button}
         </form>
       </div>
     )
