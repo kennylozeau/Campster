@@ -19,11 +19,31 @@ class ReservationForm extends React.Component {
     }
 
     this.handleSubmit= this.handleSubmit.bind(this);
+    this.checkValidDate = this.checkValidDate.bind(this);
     this.isHighlighted = this.isHighlighted.bind(this);
+  }
+
+  checkValidDate(endDate) {
+    let numDays = Math.round((this.state.startDate - endDate) / (60 * 60 * 24 * 1000));
+    if (numDays >= 0) {
+      this.setState({ focusedStart: true, startDate: null });
+    } else {
+      this.setState({ endDate })
+    }
   }
 
   handleSubmit(event) {
     event.preventDefault();
+
+    if (this.state.startDate === null) {
+      this.setState({ focusedStart: true });
+      return
+    }
+
+    if (this.state.endDate === null) {
+      this.setState({ focusedEnd: true });
+      return
+    }
     
     const reservation = {
       camper_id: this.state.camperId,
@@ -72,7 +92,7 @@ class ReservationForm extends React.Component {
             <SingleDatePicker
               placeholder="Check in"
               date={this.state.startDate}
-              onDateChange={startDate => this.setState({ startDate })}
+              onDateChange={startDate => this.setState({ startDate, endDate: null, focusedEnd: true })}
               focused={this.state.focusedStart}
               numberOfMonths={1}
               verticalSpacing={0}
@@ -85,7 +105,7 @@ class ReservationForm extends React.Component {
             <SingleDatePicker
               placeholder="Check out"
               date={this.state.endDate}
-              onDateChange={endDate => this.setState({ endDate })}
+              onDateChange={endDate => this.checkValidDate(endDate)}
               focused={this.state.focusedEnd}
               isDayHighlighted={day => this.isHighlighted(day)}
               numberOfMonths={1}
