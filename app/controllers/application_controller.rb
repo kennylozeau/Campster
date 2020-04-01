@@ -22,8 +22,6 @@ class ApplicationController < ActionController::Base
   end
 
   def ensure_user_logged_in
-    unless logged_in?
-      # FINISH THIS LOGIC
-    end
+    redirect_to new_session_url unless logged_in?
   end
 end
