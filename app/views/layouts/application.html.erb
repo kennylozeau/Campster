@@ -15,6 +15,13 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Campster" />
+    <meta property="og:description"
+          content="A single-page full-stack clone of Hipcamp.com (React/Redux, Ruby on Rails, PostgreSQL, HTML5, CSS 3)" />
+    <meta name="author" content="Kenny Lozeau" />
+    <meta property="og:image" content="./app/assets/images/camp1.jpg" />
+
     <link href="https://fonts.googleapis.com/css?family=Archivo:400,500,600,700&display=swap" rel="stylesheet">
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
